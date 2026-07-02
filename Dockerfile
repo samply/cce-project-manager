@@ -9,7 +9,6 @@ COPY generate_bridgeheads.sh /app/
 
 COPY form-fields/ /app/form-fields/
 COPY templates/ /app/templates/
-COPY coder/ /app/coder/
 
 WORKDIR /app
 
