@@ -1,0 +1,69 @@
+{
+  "config": {
+    "Export": {
+      "project": {
+        "label": "Data Export",
+        "description": "Specify and request the datasets that you would like to be exported at the different sites for you in an anonymised, tabular file format (.csv).",
+        "outputs": [
+          {
+            "projectType": "EXPORT",
+            "outputFormat": "EXCEL",
+            "templateId": "ccp"
+          }
+        ]
+      },
+      "forms": [
+        {
+          "title": "project"
+        },
+        {
+          "title": "query"
+        }
+      ]
+    },
+    "ExportAndSamples": {
+      "project": {
+        "label": "Biosamples and Data Export",
+        "description": "Specify which biosamples and annotation datasets you wish to request on site. These datasets will be exported at the different sites for you in an anonymised, tabular file format (.csv). The required biosamples will then be checked for their availability with the local biobank.",
+        "outputs": [
+          {
+            "projectType": "EXPORT",
+            "outputFormat": "EXCEL",
+            "templateId": "ccp"
+          },
+          {
+            "projectType": "SAMPLES",
+            "outputFormat": "EXCEL",
+            "templateId": "ccp-sample-list"
+          }
+        ]
+      },
+      "forms": [
+        {
+          "title": "project"
+        },
+        {
+          "title": "query"
+        },
+        {
+          "title": "samples"
+        }
+      ]
+    },
+    "CUSTOM": {
+      "project": {
+        "label": "Custom",
+        "description": "Offer a highly configurable export service tailored to advanced users. Researchers can customize export templates, select output formats, and define various parameters to suit specific project needs. This service is ideal for users with in-depth technical knowledge and complex requirements.",
+        "isCustomConfigSelected": "true"
+      },
+      "forms": [
+        {
+          "title": "project"
+        },
+        {
+          "title": "query"
+        }
+      ]
+    }
+  }
+}
