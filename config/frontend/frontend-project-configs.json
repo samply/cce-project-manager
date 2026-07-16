@@ -21,35 +21,6 @@
         }
       ]
     },
-    "ExportAndSamples": {
-      "project": {
-        "label": "Biosamples and Data Export",
-        "description": "Specify which biosamples and annotation datasets you wish to request on site. These datasets will be exported at the different sites for you in an anonymised, tabular file format (.csv). The required biosamples will then be checked for their availability with the local biobank.",
-        "outputs": [
-          {
-            "projectType": "EXPORT",
-            "outputFormat": "EXCEL",
-            "templateId": "ccp"
-          },
-          {
-            "projectType": "SAMPLES",
-            "outputFormat": "EXCEL",
-            "templateId": "ccp-sample-list"
-          }
-        ]
-      },
-      "forms": [
-        {
-          "title": "project"
-        },
-        {
-          "title": "query"
-        },
-        {
-          "title": "samples"
-        }
-      ]
-    },
     "CUSTOM": {
       "project": {
         "label": "Custom",
