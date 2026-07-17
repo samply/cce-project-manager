@@ -24,25 +24,10 @@ EOF
 while IFS='|' read -r id human; do
     generate_bridgehead "$id" "$human"
 done <<EOF
-berlin|Berlin
-bonn|Bonn
-dktk-test|DKTK Test
-dktk-datashield-test|DKTK DataSHIELD Test
-dresden|Dresden
-dresden-test|Dresden Test
-essen|Essen
-frankfurt|Frankfurt
-freiburg|Freiburg
-hamburg|Hamburg
-hannover|Hannover
-luebeck|Lübeck
-mainz|Mainz
-mannheim|Mannheim
-marburg|Marburg
-master|MASTER
-muenchen-lmu|München LMU
-muenchen-tum|München TUM
-tuebingen|Tübingen
-ulm|Ulm
-wuerzburg|Würzburg
+cce-dkfz|DKFZ
+cce-gr|GR
+cce-vhio|VHIO
+cce-cruk-cc-dev|CCE (Dev)
+cce-ki|KI
+cce-nki|NKI
 EOF
