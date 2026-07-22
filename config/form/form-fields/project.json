@@ -12,6 +12,7 @@
     {
       "label": "principal-investigator",
       "multiple": false,
+      "min_instances": 1,
       "display_name": {
         "en": "Principal Investigator (Applicant)",
         "de": "Hauptverantwortlicher (Antragsteller)"
