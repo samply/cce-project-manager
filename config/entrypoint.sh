@@ -22,8 +22,6 @@ export FORM_RESOURCES_DIRECTORY="/app/form/templates"
 export FORM_TEMPLATE_METADATA_DIRECTORY="/app/form/templates/metadata"
 
 export EMAIL_TEMPLATES_CONFIG_PATH="/app/email/email-templates.json"
-export FRONTEND_PROJECT_CONFIG_PATH="/app/frontend/frontend-project-configs.json"
-export ASSETS_DIRECTORY="/app/frontend/assets"
 export ACTION_EXPLANATION_CONFIG_PATH="/app/action-explanations.json"
 
 # export BEAM_API_KEY="App1Secret" #################################### <= Please configure me
@@ -64,8 +62,8 @@ export SAMPLES_TEMPLATES="ccp-sample-list"
 
 # export FRONTEND_BASEURL="http://project-manager-ui:8099" #################################### <= Please configure me
 
-export FRONTEND_SITES_PROJECTMINUSDASHBOARD="/"
-export FRONTEND_SITES_PROJECTMINUSVIEW="/project-view"
+# Load frontend-related environment variables into the current shell.
+. /app/frontend/frontend-environment.sh
 
 export MANAGE_TOKENS_CRON_EXPRESSION="0 * * * * *"
 
