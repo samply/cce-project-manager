@@ -6,6 +6,6 @@ export FRONTEND_SITES_PROJECTMINUSDASHBOARD="/"
 export FRONTEND_SITES_PROJECTMINUSVIEW="/project-view"
 export ASSETS_DIRECTORY="/app/frontend/assets"
 
-export FRONTEND_VARIABLES_LOGO_URL="${PROJECT_MANAGER_URL}/assets/cce-logo.svg"
+export FRONTEND_VARIABLES_LOGO_URL="${BACKEND_BASEURL}/assets/cce-logo.svg"
 export FRONTEND_VARIABLES_PROJECT_URL="https://www.cancercoreeurope.eu/"
 export FRONTEND_VARIABLES_LOGO_TEXT="cce"
