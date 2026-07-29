@@ -73,7 +73,7 @@ export JWT_GROUPS_CLAIM="groups"
 # export OIDC_CLIENT_SECRET="XXXX" #################################### <= Please configure me
 # export OIDC_URL="XXX" #################################### <= Please configure me
 
-export PM_ADMIN_GROUPS="admin-ccp-office"
+export PM_ADMIN_GROUPS="cce-requester-admin"
 export PROJECT_DOCUMENTS_DIRECTORY="/app/documents"
 
 export PROJECT_MANAGER_EMAIL_FROM="noreply-verbis@dkfz-heidelberg.de"
