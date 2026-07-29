@@ -15,6 +15,7 @@ export ENABLE_EMAILS="true"
 export ENABLE_EXPORTER="true"
 export ENABLE_RSTUDIO_GROUP_MANAGER="false"
 export ENABLE_TOKEN_MANAGER="true"
+export ENABLE_APP_REGISTER="true"
 export SECURITY_ENABLED="true"
 
 export FORM_FIELDS_DIRECTORY="/app/form/form-fields"
@@ -85,6 +86,16 @@ export SPRING_MAIL_PRIMARY_PORT="25"
 # export SPRING_MAIL_PRIMARY_USERNAME=""
 
 # export TOKEN_MANAGER_URL="http://token-manager:3030" #################################### <= Please configure me
+
+
+# Ignore these variables. TODO: Remove after disable module in project manager doesn't require disabled module variables
+export APP_REGISTER_BASE_URL="http://beam-register:3000"
+export APP_REGISTER_API_KEY="XXX"
+export CODER_MEMBER_ID="XXX"
+export CODER_ORGANISATION_ID="XXX"
+export CODER_SESSION_TOKEN="XXX"
+export CODER_BEAM_ID_SUFFIX="XXX"
+export TOKEN_MANAGER_URL="http://token-manager:3030"
 
 
 # Generate bridgehead exports
