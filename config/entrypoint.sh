@@ -29,9 +29,9 @@ export ACTION_EXPLANATION_CONFIG_PATH="/app/action-explanations.json"
 # export BEAM_PROJECT_MANAGER_ID="project-manager.proxy.broker.ccp-it.dktk.dkfz.de" #################################### <= Please configure me
 # export BEAM_URL="http://beam-proxy:8081" #################################### <= Please configure me
 
-export BK_ADMIN_GROUP_PREFIX="DKTK_CCP_"
+export BK_ADMIN_GROUP_PREFIX="CCE_"
 export BK_ADMIN_GROUP_SUFFIX="_Verwalter"
-export BK_USER_GROUP_PREFIX="DKTK_CCP_"
+export BK_USER_GROUP_PREFIX="CCE_"
 export BK_USER_GROUP_SUFFIX=""
 
 export CHECK_EXPIRED_ACTIVE_PROJECTS_CRON_EXPRESSION="30 * * * * *"
