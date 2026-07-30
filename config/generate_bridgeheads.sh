@@ -11,11 +11,11 @@ generate_bridgehead() {
 
     cat <<EOF
 export BRIDGEHEADS_CONFIG_${upper_id}_EXPLORERID="lens-${id}"
-export BRIDGEHEADS_CONFIG_${upper_id}_FILEDISPATCHERBEAMID="beam-file.${id}.broker.ccp-it.dktk.dkfz.de"
-export BRIDGEHEADS_CONFIG_${upper_id}_FOCUSBEAMID="focus.${id}.broker.ccp-it.dktk.dkfz.de"
+export BRIDGEHEADS_CONFIG_${upper_id}_FILEDISPATCHERBEAMID="beam-file.${id}.${BROKER_ID}"
+export BRIDGEHEADS_CONFIG_${upper_id}_FOCUSBEAMID="focus.${id}.${BROKER_ID}"
 export BRIDGEHEADS_CONFIG_${upper_id}_HUMANREADABLE="${human}"
 export BRIDGEHEADS_CONFIG_${upper_id}_AFFILIATION="${human}"
-export BRIDGEHEADS_CONFIG_${upper_id}_TOKENMANAGERID="token-manager.${id}.broker.ccp-it.dktk.dkfz.de"
+export BRIDGEHEADS_CONFIG_${upper_id}_TOKENMANAGERID="token-manager.${id}.${BROKER_ID}"
 
 EOF
 }
