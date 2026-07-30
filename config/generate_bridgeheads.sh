@@ -28,6 +28,7 @@ cce-dkfz|DKFZ
 cce-gr|GR
 cce-vhio|VHIO
 cce-cruk-cc-dev|CCE (Dev)
+cce-cruk-cc|CCE
 cce-ki|KI
 cce-nki|NKI
 EOF
