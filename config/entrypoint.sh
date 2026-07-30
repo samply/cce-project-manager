@@ -10,12 +10,11 @@ export EMAIL_CONTEXT_B64RESEARCHMINUSENVIRONMENTMINUSLINK="$(base64 -w 0 /app/em
 # Export other environment variables:
 
 export LOG_LEVEL="INFO"
-export ENABLE_CODER="true"
+export ENABLE_CODER="false"
 export ENABLE_EMAILS="true"
 export ENABLE_EXPORTER="true"
-export ENABLE_RSTUDIO_GROUP_MANAGER="false"
-export ENABLE_TOKEN_MANAGER="true"
-export ENABLE_APP_REGISTER="true"
+export ENABLE_TOKEN_MANAGER="false"
+export ENABLE_APP_REGISTER="false"
 export SECURITY_ENABLED="true"
 
 export FORM_FIELDS_DIRECTORY="/app/form/form-fields"
