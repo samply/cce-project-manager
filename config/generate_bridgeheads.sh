@@ -27,8 +27,8 @@ done <<EOF
 cce-dkfz|DKFZ
 cce-gr|GR
 cce-vhio|VHIO
-cce-cruk-cc-dev|CCE (Dev)
-cce-cruk-cc|CCE
+cce-cruk-cc-dev|CCC (Dev)
+cce-cruk-cc|CCC
 cce-ki|KI
 cce-nki|NKI
 EOF
