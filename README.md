@@ -1,1 +1,1 @@
-# dktk-project-manager
+# cce-project-manager
