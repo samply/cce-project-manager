@@ -30,7 +30,7 @@
       "mandatory": true,
       "data_type": "STRING",
       "display_name": {
-        "en": "Your name and DKTK-affiliation"
+        "en": "Your name and CCE-affiliation"
       },
       "value": "${creator-name} (${creator-affiliations})"
     },
