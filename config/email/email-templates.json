@@ -16,13 +16,13 @@
       }
     },
     "NEW_VOTUM": {
-      "subject": "New Votum from <bridgehead/> for Project <project-code/>",
+      "subject": "New Vote from <bridgehead/> for Project <project-code/>",
       "files": {
         "PROJECT_MANAGER_ADMIN": "project-manager-admin-new-votum.html"
       }
     },
     "NEW_VOTUM_FOR_ALL_BRIDGEHEADS": {
-      "subject": "New Votum for Project <project-code/> – Applicable to All Bridgeheads",
+      "subject": "New Vote for Project <project-code/> – Applicable to All Bridgeheads",
       "files": {
         "DEFAULT": "default-new-votum.html"
       }
