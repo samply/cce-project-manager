@@ -46,7 +46,7 @@
       "mandatory": true,
       "data_type": "STRING",
       "display_name": {
-        "en": "Project ID"
+        "en": "Data Request ID"
       },
       "description": {
         "en": "Technical ID for the project"
@@ -57,7 +57,7 @@
       "mandatory": true,
       "data_type": "DATE",
       "display_name": {
-        "en": "Project application date"
+        "en": "Data Request application date"
       },
       "value": "${project-creation-date}"
     },
@@ -65,7 +65,7 @@
       "mandatory": true,
       "data_type": "STRING",
       "display_name": {
-        "en": "Project title"
+        "en": "Data Request title"
       },
       "description": {
         "en": "Please give a short title for your project"

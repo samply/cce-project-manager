@@ -1,7 +1,7 @@
 {
   "title": "project",
   "display_name": {
-    "en": "Project",
+    "en": "Data Request",
     "de": "Projekt"
   },
   "description": {
@@ -167,7 +167,7 @@
       "mandatory": true,
       "data_type": "STRING",
       "display_name": {
-        "en": "Project methodology",
+        "en": "Data Request methodology",
         "de": "Projektmethodik"
       },
       "description": {
