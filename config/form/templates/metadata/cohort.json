@@ -49,7 +49,7 @@
         "en": "Data Request ID"
       },
       "description": {
-        "en": "Technical ID for the project"
+        "en": "Technical ID for the data request"
       },
       "value": "${project-code}"
     },
@@ -68,7 +68,7 @@
         "en": "Data Request title"
       },
       "description": {
-        "en": "Please give a short title for your project"
+        "en": "Please give a short title for your data request"
       },
       "value": "${project-title}"
     },
@@ -79,7 +79,7 @@
         "en": "Study Objective"
       },
       "description": {
-        "en": "Short description of the project: What is the aim/objective of the project?"
+        "en": "Short description of the data request: What is the aim/objective of the data request?"
       },
       "value": "${project-description}"
     }
