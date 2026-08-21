@@ -14,10 +14,16 @@
       },
       "forms": [
         {
+          "title": "project"
+        },
+        {
           "title": "query"
         },
         {
-          "title": "project"
+          "title": "ethics"
+        },
+        {
+          "title": "funding"
         }
       ]
     },
