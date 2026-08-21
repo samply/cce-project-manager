@@ -8,35 +8,35 @@
     "en": " Please provide information about your project",
     "de": "Bitte geben Sie Informationen zu Ihrem Projekt an"
   },
-  "blocks": [
-    {
-      "label": "principal-investigator",
-      "multiple": false,
-      "min_instances": 1,
-      "display_name": {
-        "en": "Principal Investigator (Applicant)",
-        "de": "Hauptverantwortlicher (Antragsteller)"
-      },
-      "description": {
-        "en": "The applicant serves as the primary point of contact.",
-        "de": "Der Antragsteller dient als primärer Ansprechpartner."
-      }
-    }
-  ],
   "fields": [
     {
-      "label": "principal_investigator_title",
+      "label": "conflict_declaration",
       "mandatory": false,
-      "data_type": "STRING",
-      "block": "principal-investigator",
+      "data_type": "ENUM",
       "display_name": {
-        "en": "Title",
-        "de": "Titel"
+        "en": "Conflict of Interest Declaration",
+        "de": "Conflict of Interest Declaration"
       },
       "description": {
         "en": "Academic title of the principal investigator",
         "de": "Akademischer Titel des Hauptverantwortlichen"
-      }
+      },
+      "allowed_values": [
+        {
+          "label": "no_conflict",
+          "display_name": {
+            "en": "No conflicts of interest",
+            "de": "No conflicts of interest"
+          }
+        },
+        {
+          "label": "potential_conflicts",
+          "display_name": {
+            "en": "Potential conflicts disclosed",
+            "de": "Potential conflicts disclosed"
+          }
+        }
+      ]
     }
   ]
 }
