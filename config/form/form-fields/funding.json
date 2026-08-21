@@ -1,0 +1,42 @@
+{
+  "title": "funding",
+  "display_name": {
+    "en": "Funding and Conflicts of Interest",
+    "de": "Projekt"
+  },
+  "description": {
+    "en": " Please provide information about your project",
+    "de": "Bitte geben Sie Informationen zu Ihrem Projekt an"
+  },
+  "blocks": [
+    {
+      "label": "principal-investigator",
+      "multiple": false,
+      "min_instances": 1,
+      "display_name": {
+        "en": "Principal Investigator (Applicant)",
+        "de": "Hauptverantwortlicher (Antragsteller)"
+      },
+      "description": {
+        "en": "The applicant serves as the primary point of contact.",
+        "de": "Der Antragsteller dient als primärer Ansprechpartner."
+      }
+    }
+  ],
+  "fields": [
+    {
+      "label": "principal_investigator_title",
+      "mandatory": false,
+      "data_type": "STRING",
+      "block": "principal-investigator",
+      "display_name": {
+        "en": "Title",
+        "de": "Titel"
+      },
+      "description": {
+        "en": "Academic title of the principal investigator",
+        "de": "Akademischer Titel des Hauptverantwortlichen"
+      }
+    }
+  ]
+}

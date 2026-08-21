@@ -1,11 +1,11 @@
 {
   "title": "project",
   "display_name": {
-    "en": "Data Request",
+    "en": "Project Information",
     "de": "Projekt"
   },
   "description": {
-    "en": " Please provide information about your data request",
+    "en": " Please provide information about your project",
     "de": "Bitte geben Sie Informationen zu Ihrem Projekt an"
   },
   "blocks": [
