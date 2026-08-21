@@ -35,11 +35,17 @@
       },
       "forms": [
         {
-          "title": "project"
+          "title": "query"
         },
         {
-          "title": "query"
+          "title": "project"
         }
+      ]
+    },
+    "NOT_SELECTED": {
+      "forms": [
+        { "title": "query" },
+        { "title": "project" }
       ]
     }
   }
