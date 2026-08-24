@@ -61,6 +61,7 @@ export EXPORTER_CRON_EXPRESSION="*/30 * * * * *"
 export EXPORT_TEMPLATES="ccp,ccp-exliquid"
 export SAMPLES_TEMPLATES="ccp-sample-list"
 
+export FEASIBILITY_MAPPING='[{"label": "Patients", "value": .totals.patients}, {"label": "Samples", "value": .totals.specimen}]'
 # export FRONTEND_BASEURL="http://project-manager-ui:8099" #################################### <= Please configure me
 
 # Load frontend-related environment variables into the current shell.
