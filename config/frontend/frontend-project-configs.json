@@ -39,13 +39,21 @@
         },
         {
           "title": "project"
+        },
+        {
+          "title": "ethics"
+        },
+        {
+          "title": "funding"
         }
       ]
     },
     "NOT_SELECTED": {
       "forms": [
         { "title": "query" },
-        { "title": "project" }
+        { "title": "project" },
+        { "title": "ethics" },
+        { "title": "funding" }
       ]
     }
   }
