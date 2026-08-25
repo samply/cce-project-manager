@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [0.0.1 - 2026-07-15]
+## [0.0.1 - 2026-08-24]
 ### Added
 - CHANGELOG
 - Dockerfile
@@ -66,6 +66,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Form attachments for new projects in emails
 - Final report emails
 - Assets
+- Canonical form order
 
 ### Changed
 - Replace Minus in bridgeheads

@@ -1,4 +1,13 @@
 {
+  "formTitleOrder": [
+    "query",
+    "services",
+    "custom",
+    "project",
+    "ethics",
+    "funding",
+    "summary"
+  ],
   "config": {
     "Export": {
       "project": {
