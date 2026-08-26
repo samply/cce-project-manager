@@ -218,6 +218,54 @@
       }
     },
     {
+      "label": "expected-outputs",
+      "mandatory": true,
+      "data_type": "ENUM",
+      "multiple": true,
+      "properties": ["CHECK_BOX"],
+      "display_name": {
+        "en": "Expected Outputs",
+        "de": "Expected Outputs"
+      },
+      "allowed_values": [
+        {
+          "label": "clinical-data",
+          "display_name": {
+            "en": "Clinical Data",
+            "de": "Clinical Data"
+          }
+        },
+        {
+          "label": "molecular-data",
+          "display_name": {
+            "en": "Molecular Data",
+            "de": "Molecular Data"
+          }
+        },
+        {
+          "label": "imaging-data",
+          "display_name": {
+            "en": "Imaging Data",
+            "de": "Imaging Data"
+          }
+        },
+        {
+          "label": "outcomes-data",
+          "display_name": {
+            "en": "Outcomes Data",
+            "de": "Outcomes Data"
+          }
+        },
+        {
+          "label": "other",
+          "display_name": {
+            "en": "Other",
+            "de": "Other"
+          }
+        }
+      ]
+    },
+    {
       "label": "ethical_approval",
       "mandatory": true,
       "data_type": "BOOLEAN",
