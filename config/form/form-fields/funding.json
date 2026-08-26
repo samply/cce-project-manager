@@ -5,7 +5,7 @@
     "de": "Projekt"
   },
   "description": {
-    "en": " Please provide information about your project",
+    "en": " Information about funding and conflicts of interest",
     "de": "Bitte geben Sie Informationen zu Ihrem Projekt an"
   },
   "fields": [
@@ -13,6 +13,8 @@
       "label": "conflict_declaration",
       "mandatory": false,
       "data_type": "ENUM",
+      "multiple": false,
+      "properties": ["RADIO_BUTTON"],
       "display_name": {
         "en": "Conflict of Interest Declaration",
         "de": "Conflict of Interest Declaration"

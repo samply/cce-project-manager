@@ -93,6 +93,20 @@
       }
     },
     {
+      "label": "principal_investigator_position",
+      "mandatory": true,
+      "data_type": "STRING",
+      "block": "principal-investigator",
+      "display_name": {
+        "en": "Position / Role",
+        "de": "Position / Role"
+      },
+      "description": {
+        "en": "Position or Role of the principal investigator",
+        "de": "Position oder Role des Hauptverantwortlichen"
+      }
+    },
+    {
       "label": "principal_investigator_email",
       "mandatory": true,
       "data_type": "STRING",
@@ -104,6 +118,20 @@
       "description": {
         "en": "Contact email address of the principal investigator",
         "de": "Kontakt-E-Mail-Adresse des Hauptverantwortlichen"
+      }
+    },
+    {
+      "label": "collaborator-title",
+      "mandatory": false,
+      "data_type": "STRING",
+      "block": "collaborators",
+      "display_name": {
+        "en": "Title",
+        "de": "Titel"
+      },
+      "description": {
+        "en": "Academic title of the collaborator",
+        "de": "Akademischer Titel des Kooperationspartners"
       }
     },
     {
@@ -135,20 +163,6 @@
       }
     },
     {
-      "label": "collaborator-email",
-      "mandatory": false,
-      "data_type": "STRING",
-      "block": "collaborators",
-      "display_name": {
-        "en": "Email Address",
-        "de": "E-Mail-Adresse"
-      },
-      "description": {
-        "en": "Contact email address of the collaborator",
-        "de": "Kontakt-E-Mail-Adresse des Kooperationspartners"
-      }
-    },
-    {
       "label": "collaborator-affiliation",
       "mandatory": false,
       "data_type": "STRING",
@@ -160,6 +174,34 @@
       "description": {
         "en": "Institution or organisation of the collaborator",
         "de": "Institution oder Organisation des Kooperationspartners"
+      }
+    },
+    {
+      "label": "collaborator-role",
+      "mandatory": false,
+      "data_type": "STRING",
+      "block": "collaborators",
+      "display_name": {
+        "en": "Position / Role",
+        "de": "Position / Role"
+      },
+      "description": {
+        "en": "Position or Role of the collaborator",
+        "de": "Position oder Role des Kooperationspartners"
+      }
+    },
+    {
+      "label": "collaborator-email",
+      "mandatory": false,
+      "data_type": "STRING",
+      "block": "collaborators",
+      "display_name": {
+        "en": "Email Address",
+        "de": "E-Mail-Adresse"
+      },
+      "description": {
+        "en": "Contact email address of the collaborator",
+        "de": "Kontakt-E-Mail-Adresse des Kooperationspartners"
       }
     },
     {

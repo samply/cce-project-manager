@@ -26,6 +26,8 @@
       "label": "ethics_approval_status",
       "mandatory": true,
       "data_type": "ENUM",
+      "multiple": false,
+      "properties": ["RADIO_BUTTON"],
       "display_name": {
         "en": "Ethics Approval Status",
         "de": "Ethics Approval Status"
@@ -61,11 +63,29 @@
     {
       "label": "ethics_confirmation",
       "mandatory": true,
-      "data_type": "BOOLEAN",
+      "data_type": "ENUM",
+      "multiple": false,
+      "properties": ["RADIO_BUTTON"],
       "display_name": {
         "en": "I confirm that the requested data will be used exclusively for the purpose described in this application and in compliance with applicable data protection and governance requirements.",
         "de": "Tumordokumentation"
-      }
+      },
+      "allowed_values": [
+        {
+          "label": "yes",
+          "display_name": {
+            "en": "Agree",
+            "de": "Ja"
+          }
+        },
+        {
+          "label": "no",
+          "display_name": {
+            "en": "Disagree",
+            "de": "Nein"
+          }
+        }
+      ]
     }
   ]
 }
