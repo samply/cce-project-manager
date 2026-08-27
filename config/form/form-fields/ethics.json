@@ -74,7 +74,7 @@
       }
     },
     {
-      "label": "ETHIC_VOTE_FOR_ALL_SITES",
+      "label": "ETHICS_VOTE_FOR_ALL_SITES",
       "field_type": "FIXED"
     },
     {

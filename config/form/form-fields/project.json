@@ -37,7 +37,7 @@
   ],
   "fields": [
     {
-      "label": "ETHIC_VOTE",
+      "label": "ETHICS_VOTE",
       "field_type": "FIXED",
       "active": false
     },
