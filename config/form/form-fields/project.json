@@ -37,6 +37,11 @@
   ],
   "fields": [
     {
+      "label": "ETHIC_VOTE",
+      "field_type": "FIXED",
+      "active": false
+    },
+    {
       "label": "PROJECT_DESCRIPTION",
       "field_type": "FIXED",
       "properties": [

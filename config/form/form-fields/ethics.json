@@ -74,6 +74,10 @@
       }
     },
     {
+      "label": "ETHIC_VOTE_FOR_ALL_SITES",
+      "field_type": "FIXED"
+    },
+    {
       "label": "ethics_confirmation",
       "mandatory": false,
       "data_type": "ENUM",
