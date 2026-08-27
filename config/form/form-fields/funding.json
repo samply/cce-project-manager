@@ -5,10 +5,23 @@
     "de": "Projekt"
   },
   "description": {
-    "en": " Information about funding and conflicts of interest",
+    "en": "Information about funding and conflicts of interest",
     "de": "Bitte geben Sie Informationen zu Ihrem Projekt an"
   },
   "fields": [
+    {
+      "label": "funding",
+      "mandatory": false,
+      "data_type": "STRING",
+      "display_name": {
+        "en": "Funding",
+        "de": "Förderung"
+      },
+      "description": {
+        "en": "Please indicate who is funding this data request (e.g. institution, third-party funder, industry sponsor). If applicable, include the grant/funding reference number (Förderkennzeichen).",
+        "de": "Bitte geben Sie an, wer dieses Projekt finanziert (z. B. Institution, Drittmittelgeber, Industriesponsor). Falls zutreffend, geben Sie bitte das Förderkennzeichen an."
+      }
+    },
     {
       "label": "conflict_declaration",
       "mandatory": false,

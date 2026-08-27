@@ -37,6 +37,61 @@
   ],
   "fields": [
     {
+      "label": "PROJECT_DESCRIPTION",
+      "field_type": "FIXED",
+      "properties": [
+        "KEEP_FIXED_FIELD_ORDER"
+      ],
+      "description": {
+        "en": "Briefly describe your project in a few words (max 250)",
+        "de": "TEST: Geben Sie einen kurzen Antragstitel ein."
+      }
+    },
+    {
+      "label": "research-objectives",
+      "mandatory": false,
+      "data_type": "STRING",
+      "display_name": {
+        "en": "Research Objective(s)",
+        "de": "Research Objective(s)"
+      }
+    },
+    {
+      "label": "project-duration",
+      "mandatory": false,
+      "data_type": "STRING",
+      "display_name": {
+        "en": "Project Duration",
+        "de": "Project Duration"
+      }
+    },
+    {
+      "label": "planned-start-date",
+      "mandatory": false,
+      "data_type": "STRING",
+      "display_name": {
+        "en": "Planned Start Date of the Project",
+        "de": "Planned Start Date of the Project"
+      }
+    },
+    {
+      "label": "planned-end-date",
+      "mandatory": false,
+      "data_type": "STRING",
+      "display_name": {
+        "en": "Planned End Date of the Project",
+        "de": "Planned End Date of the Project"
+      }
+    },
+    {
+      "label": "QUERIED_SITES",
+      "field_type": "FIXED",
+      "description": {
+        "en": "Sites selected in the Explorer having samples or data matching your search criteria.",
+        "de": "Sites selected in the Explorer having samples or data matching your search criteria."
+      }
+    },
+    {
       "label": "principal_investigator_title",
       "mandatory": false,
       "data_type": "STRING",
@@ -209,19 +264,18 @@
       "mandatory": true,
       "data_type": "STRING",
       "display_name": {
-        "en": "Data Request methodology",
+        "en": "Data Analysis methodology",
         "de": "Projektmethodik"
       },
       "description": {
-        "en": "Please provide a short description of the analysis method planned for use in your data request (e.g. federated data analysis, CRP with ELISA, Whole Genome Sequencing, Tissue Micro Array...)",
-        "de": "Bitte geben Sie eine kurze Beschreibung der Analysemethode an, die in Ihrem Projekt zum Einsatz kommen soll (z. B. föderierte Datenanalyse, CRP mit ELISA, Ganzgenomsequenzierung, Gewebemikroarray...)"
+        "en": "Please provide a short description of the analysis method planned for use in your data request (e.g. federated data analysis...)",
+        "de": "Bitte geben Sie eine kurze Beschreibung der Analysemethode an, die in Ihrem Projekt zum Einsatz kommen soll (z. B. föderierte Datenanalyse...)"
       }
     },
     {
       "label": "expected-outputs",
       "mandatory": true,
       "data_type": "ENUM",
-      "multiple": true,
       "properties": ["CHECK_BOX"],
       "display_name": {
         "en": "Expected Outputs",
@@ -229,31 +283,24 @@
       },
       "allowed_values": [
         {
-          "label": "clinical-data",
+          "label": "publication",
           "display_name": {
-            "en": "Clinical Data",
-            "de": "Clinical Data"
+            "en": "Publication",
+            "de": "Publication"
           }
         },
         {
-          "label": "molecular-data",
+          "label": "conference-presentation",
           "display_name": {
-            "en": "Molecular Data",
-            "de": "Molecular Data"
+            "en": "Conference Presentation",
+            "de": "Conference Presentation"
           }
         },
         {
-          "label": "imaging-data",
+          "label": "grant-application",
           "display_name": {
-            "en": "Imaging Data",
-            "de": "Imaging Data"
-          }
-        },
-        {
-          "label": "outcomes-data",
-          "display_name": {
-            "en": "Outcomes Data",
-            "de": "Outcomes Data"
+            "en": "Grant Application",
+            "de": "Grant Application"
           }
         },
         {
@@ -264,45 +311,6 @@
           }
         }
       ]
-    },
-    {
-      "label": "ethical_approval",
-      "mandatory": true,
-      "data_type": "BOOLEAN",
-      "display_name": {
-        "en": "Ethics vote",
-        "de": "Ethikabstimmung"
-      },
-      "description": {
-        "en": "Has an ethics review been conducted for your data request?",
-        "de": "Wurde für Ihr Projekt eine Ethikprüfung durchgeführt?"
-      }
-    },
-    {
-      "label": "funding",
-      "mandatory": false,
-      "data_type": "STRING",
-      "display_name": {
-        "en": "Funding",
-        "de": "Förderung"
-      },
-      "description": {
-        "en": "Please indicate who is funding this data request (e.g. institution, third-party funder, industry sponsor). If applicable, include the grant/funding reference number (Förderkennzeichen).",
-        "de": "Bitte geben Sie an, wer dieses Projekt finanziert (z. B. Institution, Drittmittelgeber, Industriesponsor). Falls zutreffend, geben Sie bitte das Förderkennzeichen an."
-      }
-    },
-    {
-      "label": "comments",
-      "mandatory": false,
-      "data_type": "LONG_STRING",
-      "display_name": {
-        "en": "Comments",
-        "de": "Kommentare"
-      },
-      "description": {
-        "en": "Please list any further inclusion or exclusion criteria for the data or samples here",
-        "de": "Bitte listen Sie hier alle weiteren Ein- oder Ausschlusskriterien für die Daten oder Proben auf"
-      }
     }
   ]
 }

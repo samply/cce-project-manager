@@ -10,6 +10,17 @@
   },
   "fields": [
     {
+      "label": "ADDITIONAL_FILTER_CRITERIA",
+      "field_type": "FIXED",
+      "properties": [
+        "KEEP_FIXED_FIELD_ORDER"
+      ],
+      "description": {
+        "en": "Please provide additional filter criteria that could not be selected in the Explorer, or further notes on the resources you want to request",
+        "de": "TEST: Geben Sie einen kurzen Antragstitel ein."
+      }
+    },
+    {
       "label": "size",
       "mandatory": true,
       "data_type": "INTEGER",
@@ -115,7 +126,8 @@
     },
     {
       "label": "data_analysis_method",
-      "mandatory": true,
+      "mandatory": false,
+      "active": false,
       "data_type": "STRING",
       "display_name": {
         "en": "Data analysis method",
