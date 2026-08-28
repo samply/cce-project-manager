@@ -8,6 +8,13 @@
     "en": "Information about funding and conflicts of interest",
     "de": "Bitte geben Sie Informationen zu Ihrem Projekt an"
   },
+  "layouts": [
+    {
+      "rows": [
+        {"fields": ["conflict_declaration", "conflict_declaration_text"]}
+      ]
+    }
+  ],
   "fields": [
     {
       "label": "funding",
@@ -27,7 +34,7 @@
       "mandatory": false,
       "data_type": "ENUM",
       "multiple": false,
-      "properties": ["RADIO_BUTTON"],
+      "properties": ["RADIO_BUTTON", "CSS_ENUM"],
       "display_name": {
         "en": "Conflict of Interest Declaration",
         "de": "Conflict of Interest Declaration"
@@ -52,6 +59,17 @@
           }
         }
       ]
+    },
+    {
+      "label": "conflict_declaration_text",
+      "mandatory": false,
+      "data_type": "LONG_STRING",
+      "properties": ["CSS_ENUM_VALUE"],
+      "display_name": {
+        "en": "Potential conflicts",
+        "de": "Potenzielle Konflikte"
+      },
+      "condition": "['funding']['conflict_declaration']['value'] == 'potential_conflicts'"
     }
   ]
 }
