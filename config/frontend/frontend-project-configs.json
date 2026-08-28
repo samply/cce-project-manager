@@ -6,6 +6,7 @@
     "project",
     "ethics",
     "funding",
+    "applicant_declaration",
     "summary"
   ],
   "config": {
@@ -33,6 +34,9 @@
         },
         {
           "title": "funding"
+        },
+        {
+          "title": "applicant_declaration"
         }
       ]
     },
@@ -54,6 +58,9 @@
         },
         {
           "title": "funding"
+        },
+        {
+          "title": "applicant_declaration"
         }
       ]
     },
@@ -62,7 +69,8 @@
         { "title": "query" },
         { "title": "project" },
         { "title": "ethics" },
-        { "title": "funding" }
+        { "title": "funding" },
+        { "title": "applicant_declaration" }
       ]
     }
   }

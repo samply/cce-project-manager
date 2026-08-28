@@ -1,0 +1,22 @@
+{
+  "title": "applicant_declaration",
+  "display_name": {
+    "en": "Applicant Declaration",
+    "de": "Erklärung des Antragstellers"
+  },
+  "fields": [
+    {
+      "label": "applicant_declaration",
+      "mandatory": false,
+      "data_type": "BOOLEAN",
+      "display_name": {
+        "en": "",
+        "de": ""
+      },
+      "description": {
+        "en": "I certify that the information provided in this form is accurate and complete. I agree to comply with the Cancer Core Europe Data Access Policy, Data Sharing Agreement, and all applicable legal, ethical, and data protection requirements.",
+        "de": "Ich bestätige, dass die in diesem Formular gemachten Angaben richtig und vollständig sind. Ich erkläre mich damit einverstanden, die „Cancer Core Europe Data Access Policy“ (Richtlinie für den Datenzugriff), die „Data Sharing Agreement“ (Vereinbarung zur Datenweitergabe) sowie alle geltenden rechtlichen, ethischen und datenschutzrechtlichen Anforderungen einzuhalten."
+      }
+    }
+  ]
+}
