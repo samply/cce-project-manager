@@ -1,15 +1,18 @@
 #!/bin/sh
 
-export FRONTEND_PROJECT_CONFIG_PATH="/app/frontend/frontend-project-configs.json"
-# export FRONTEND_BASEURL="http://project-manager-ui:8099" #################################### <= Please configure me
-export FRONTEND_SITES_PROJECTMINUSDASHBOARD="/"
-export FRONTEND_SITES_PROJECTMINUSVIEW="/project-view"
-export ASSETS_DIRECTORY="/app/frontend/assets"
+# Sourced by /app/entrypoint.sh, which defines setdefault: these are defaults an
+# operator can override from the container environment.
 
-export FRONTEND_VARIABLES_LOGO_URL="${BACKEND_BASEURL}/assets/cce-logo.svg"
-export FRONTEND_VARIABLES_PROJECT_URL="https://www.cancercoreeurope.eu/"
-export FRONTEND_VARIABLES_LOGO_TEXT="cce"
-export FRONTEND_VARIABLES_LOGO_CSS="${BACKEND_BASEURL}/assets/logo.css"
-export FRONTEND_VARIABLES_FRONTEND_NAME="<b>CCE VDC</b> Data Request"
-export FRONTEND_VARIABLES_PAGE_TITLE="Data Request"
-export FRONTEND_VARIABLES_FEASIBILITY_PAGE_SIZE="5"
+setdefault FRONTEND_PROJECT_CONFIG_PATH "/app/frontend/frontend-project-configs.json"
+# export FRONTEND_BASEURL="http://project-manager-ui:8099" #################################### <= Please configure me
+setdefault FRONTEND_SITES_PROJECTMINUSDASHBOARD "/"
+setdefault FRONTEND_SITES_PROJECTMINUSVIEW "/project-view"
+setdefault ASSETS_DIRECTORY "/app/frontend/assets"
+
+setdefault FRONTEND_VARIABLES_LOGO_URL "${BACKEND_BASEURL}/assets/cce-logo.svg"
+setdefault FRONTEND_VARIABLES_PROJECT_URL "https://www.cancercoreeurope.eu/"
+setdefault FRONTEND_VARIABLES_LOGO_TEXT "cce"
+setdefault FRONTEND_VARIABLES_LOGO_CSS "${BACKEND_BASEURL}/assets/logo.css"
+setdefault FRONTEND_VARIABLES_FRONTEND_NAME "<b>CCE VDC</b> Data Request"
+setdefault FRONTEND_VARIABLES_PAGE_TITLE "Data Request"
+setdefault FRONTEND_VARIABLES_FEASIBILITY_PAGE_SIZE "5"
