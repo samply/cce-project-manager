@@ -75,7 +75,8 @@
     },
     {
       "label": "ETHICS_VOTE_FOR_ALL_SITES",
-      "field_type": "FIXED"
+      "field_type": "FIXED",
+      "condition": "['ethics']['ethical_approval']['value'] == 'true'"
     },
     {
       "label": "ethics_confirmation",
