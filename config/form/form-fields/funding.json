@@ -25,7 +25,7 @@
         "de": "Förderung"
       },
       "description": {
-        "en": "Please indicate who is funding this data request (e.g. institution, third-party funder, industry sponsor). If applicable, include the grant/funding reference number (Förderkennzeichen).",
+        "en": "Please indicate who is funding this data request (e.g. institution, third-party funder, industry sponsor). If applicable, include the grant/funding reference number.",
         "de": "Bitte geben Sie an, wer dieses Projekt finanziert (z. B. Institution, Drittmittelgeber, Industriesponsor). Falls zutreffend, geben Sie bitte das Förderkennzeichen an."
       }
     },
