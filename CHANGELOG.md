@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [0.0.1 - 2026-09-02]
+## [0.0.1 - 2026-09-04]
 ### Added
 - CHANGELOG
 - Dockerfile
@@ -70,6 +70,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Mailing blacklist file
 - Applicant Declaration
 - Cache config
+- Merge action message proposals and add German translations
+
 
 ### Changed
 - Replace Minus in bridgeheads
