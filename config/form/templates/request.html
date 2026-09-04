@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-    <title>Biosample Request Form</title>
+    <title>Data Request Form</title>
     <meta charset="UTF-8"/>
     <link rel="stylesheet" th:href="@{styles/request-form.css}"/>
     <!-- Page numbering CSS (dynamic via Thymeleaf) -->
@@ -12,7 +12,7 @@
 
             /* HEADER (from page 2 onwards) */
             @top-left {
-                content: "CCP-Bio: Biosample Request Form";
+                content: "CCE: Data Request Form";
                 font-family: Helvetica, Arial, sans-serif;
                 font-size: 9pt;
                 color: #00457d;
@@ -52,7 +52,7 @@
         <td class="header-col-left">
             <img th:src="@{assets/cce-logo.png}" alt="CCE Logo" class="logo-cce"/>
             <div class="title-container">
-                <h1 th:text="${#vars['form-title']}">DATA AND BIOSAMPLE REQUEST FORM</h1>
+                <h1 th:text="${#vars['form-title']}">DATA REQUEST FORM</h1>
                 <p class="status" th:text="'Status: ' + ${#vars['project-creation-date']}" >Status</p>
             </div>
         </td>
@@ -64,9 +64,9 @@
 </table>
 
 <div class="intro-section">
-    <p>Thank you for your interest in obtaining biosamples through the Clinical Communication Platform of CCE.</p>
+    <p>Thank you for your interest in obtaining data samples through the Virtual Data Center of CCE.</p>
     <p>
-        To request samples directly from the biobanks of the CCE and CCP sites please provide the following information
+        To request samples directly from any of the CCE sites please provide the following information
         – as a basis for a smooth process:
     </p>
 </div>

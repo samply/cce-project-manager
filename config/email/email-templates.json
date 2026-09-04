@@ -9,7 +9,7 @@
       }
     },
     "NEW_PROJECT_ACCEPTED": {
-      "subject": "New Project Acceptance - CCP Office",
+      "subject": "New Project Acceptance - CCE Office",
       "files": {
         "CREATOR": "creator-new-project-accepted.html",
         "BRIDGEHEAD_ADMIN": "bridgehead-admin-new-project-accepted.html"
