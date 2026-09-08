@@ -16,7 +16,7 @@
         "KEEP_FIXED_FIELD_ORDER"
       ],
       "description": {
-        "en": "Please provide additional filter criteria that could not be selected in the Explorer, or further notes on the resources you want to request",
+        "en": "Please provide additional filter criteria that could not be selected in the Explorer, or further notes on the resources you want to request.",
         "de": "TEST: Geben Sie einen kurzen Antragstitel ein."
       }
     },

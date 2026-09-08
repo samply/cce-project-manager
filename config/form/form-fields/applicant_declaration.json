@@ -4,6 +4,10 @@
     "en": "Applicant Declaration",
     "de": "Erklärung des Antragstellers"
   },
+  "description": {
+    "en": "Please confirm your agreement to the following declarations",
+    "de": "Bitte bestätigen Sie Ihr Einverständnis mit den folgenden Erklärungen"
+  },
   "fields": [
     {
       "label": "ethics_confirmation",
@@ -13,10 +17,6 @@
       "display_name": {
         "en": "Regulatory Compliance",
         "de": "Regulatory Compliance"
-      },
-      "description": {
-        "en": "Please confirm your agreement to the following declarations:",
-        "de": "Please confirm your agreement to the following declarations:"
       },
       "allowed_values": [
         {
@@ -41,7 +41,7 @@
         {
           "label": "applicant_confirmation_label",
           "display_name": {
-            "en": "I certify that the information provided in this form is accurate and complete. I agree to comply with the Cancer Core Europe Data Sharing Joint Controller Agreement and all applicable legal, ethical, and data protection requirements.",
+            "en": "I certify that the information provided in this form is accurate and complete. I agree to comply with the Cancer Core Europe Virtual Data Center (CCE VDC) Data Sharing and Joint Controller Agreement and all applicable legal, ethical, and data protection requirements.",
             "de": "Ich bestätige, dass die in diesem Formular gemachten Angaben richtig und vollständig sind. Ich erkläre mich damit einverstanden, die „Cancer Core Europe Data Access Policy“ (Richtlinie für den Datenzugriff), die „Data Sharing Agreement“ (Vereinbarung zur Datenweitergabe) sowie alle geltenden rechtlichen, ethischen und datenschutzrechtlichen Anforderungen einzuhalten."
           }
         }
