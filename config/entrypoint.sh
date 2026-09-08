@@ -50,7 +50,7 @@ setdefault BK_ADMIN_GROUP_SUFFIX "_Verwalter"
 setdefault BK_USER_GROUP_PREFIX "CCE_"
 setdefault BK_USER_GROUP_SUFFIX ""
 # Comma-separated groups allowed to create requests without bridgehead membership.
-setdefault RESEARCHER_GROUPS "coop-cce"
+setdefault RESEARCHER_GROUPS "/projects/cce/vdc"
 
 setdefault CHECK_EXPIRED_ACTIVE_PROJECTS_CRON_EXPRESSION "30 * * * * *"
 
