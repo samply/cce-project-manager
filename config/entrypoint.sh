@@ -75,12 +75,12 @@ setdefault EMAIL_TEMPLATES_DIRECTORY "/app/email/templates"
 setdefault EXPLORER_REDIRECT_URI_PARAMETER "redirect_uri"
 # export EXPLORER_URL="https://e260-serv-13" #################################### <= Please configure me
 setdefault FOCUS_LENS_PROJECT "cce"
-
+f
 setdefault EXPORTER_CRON_EXPRESSION "*/30 * * * * *"
 setdefault EXPORT_TEMPLATES "ccp,ccp-exliquid"
 setdefault SAMPLES_TEMPLATES "ccp-sample-list"
 
-setdefault FEASIBILITY_MAPPING '[{"label": "Patients", "value": .totals.patients}, {"label": "Samples", "value": .totals.specimen}]'
+setdefault FEASIBILITY_MAPPING '[{"label": "Patients", "value": .totals.patients}]'
 # export FRONTEND_BASEURL="http://project-manager-ui:8099" #################################### <= Please configure me
 
 # Load frontend-related environment variables into the current shell.
