@@ -60,8 +60,12 @@
       "label": "ETHICS_VOTE_FOR_ALL_SITES",
       "field_type": "FIXED",
       "display_name": {
-        "en": "If approved, please attach the Ethics Form",
-        "de": "TEST: Geben Sie einen kurzen Antragstitel ein."
+        "en": "",
+        "de": ""
+      },
+      "description": {
+        "en": "If approved, please attach the Ethics Form (optional)",
+        "de": "TEST: Geben Sie einen kurzen Antragstitel ein (optional)."
       },
       "condition": "['ethics']['ethics_approval_status']['value'] == 'approved'"
     }
