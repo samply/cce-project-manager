@@ -48,7 +48,7 @@
         "KEEP_FIXED_FIELD_ORDER"
       ],
       "description": {
-        "en": "Briefly describe your project in a few words (max 250)",
+        "en": "Please briefly describe your project in a few words (max 250)",
         "de": "TEST: Geben Sie einen kurzen Antragstitel ein."
       }
     },
@@ -269,11 +269,11 @@
       "mandatory": true,
       "data_type": "STRING",
       "display_name": {
-        "en": "Data Analysis methodology",
+        "en": "Planned Data Analysis / Methodology",
         "de": "Projektmethodik"
       },
       "description": {
-        "en": "Please provide a short description of the analysis method planned for use in your data request (e.g. federated data analysis...)",
+        "en": "Please provide a short description of the planned data analysis or methodology for your request (e.g., federated data analysis)",
         "de": "Bitte geben Sie eine kurze Beschreibung der Analysemethode an, die in Ihrem Projekt zum Einsatz kommen soll (z. B. föderierte Datenanalyse...)"
       }
     },

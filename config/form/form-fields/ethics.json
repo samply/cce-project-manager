@@ -32,10 +32,6 @@
         "en": "Ethics Approval Status",
         "de": "Ethics Approval Status"
       },
-      "description": {
-        "en": "If approved, please attach the Ethics form",
-        "de": "If approved, please attach the Ethics form"
-      },
       "allowed_values": [
         {
           "label": "approved",
@@ -61,22 +57,13 @@
       ]
     },
     {
-      "label": "ethical_approval",
-      "mandatory": true,
-      "data_type": "BOOLEAN",
-      "display_name": {
-        "en": "Ethics vote",
-        "de": "Ethikabstimmung"
-      },
-      "description": {
-        "en": "Has an ethics review been conducted for your data request?",
-        "de": "Wurde für Ihr Projekt eine Ethikprüfung durchgeführt?"
-      }
-    },
-    {
       "label": "ETHICS_VOTE_FOR_ALL_SITES",
       "field_type": "FIXED",
-      "condition": "['ethics']['ethical_approval']['value'] == 'true'"
+      "display_name": {
+        "en": "If approved, please attach the Ethics Form",
+        "de": "TEST: Geben Sie einen kurzen Antragstitel ein."
+      },
+      "condition": "['ethics']['ethics_approval_status']['value'] == 'approved'"
     }
   ]
 }

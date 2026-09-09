@@ -16,7 +16,7 @@
         "KEEP_FIXED_FIELD_ORDER"
       ],
       "description": {
-        "en": "Please provide additional filter criteria that could not be selected in the Explorer, or further notes on the resources you want to request.",
+        "en": "Please provide any additional filter criteria not available in the Explorer, or any further notes about the resources you would like to request.",
         "de": "TEST: Geben Sie einen kurzen Antragstitel ein."
       }
     },
@@ -120,7 +120,7 @@
         "de": "Tumordokumentation"
       },
       "description": {
-        "en": "Would you like tumour documentation data for your selected cohort?",
+        "en": "Would you like to request tumour documentation data for your selected cohort?",
         "de": "Möchten Sie Tumordokumentationsdaten für Ihre ausgewählte Kohorte erhalten?"
       }
     },
