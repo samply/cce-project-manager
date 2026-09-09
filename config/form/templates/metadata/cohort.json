@@ -32,7 +32,7 @@
       "display_name": {
         "en": "Your name and CCE-affiliation"
       },
-      "value": "${creator-name} (${creator-affiliations})"
+      "value": "${creator-name-with-affiliations}"
     },
     {
       "mandatory": true,
@@ -46,10 +46,10 @@
       "mandatory": true,
       "data_type": "STRING",
       "display_name": {
-        "en": "Data Request ID"
+        "en": "Request ID"
       },
       "description": {
-        "en": "Technical ID for the data request"
+        "en": "Technical ID for the request"
       },
       "value": "${project-code}"
     },
@@ -57,31 +57,64 @@
       "mandatory": true,
       "data_type": "DATE",
       "display_name": {
-        "en": "Data Request application date"
+        "en": "Request application date"
       },
       "value": "${project-creation-date}"
     },
     {
+      "label": "PROJECT_TITLE",
       "mandatory": true,
       "data_type": "STRING",
       "display_name": {
-        "en": "Data Request title"
-      },
-      "description": {
-        "en": "Please give a short title for your data request"
+        "en": "Project Title"
       },
       "value": "${project-title}"
     },
     {
+      "label": "PROJECT_DESCRIPTION",
       "mandatory": true,
       "data_type": "STRING",
       "display_name": {
-        "en": "Study Objective"
-      },
-      "description": {
-        "en": "Short description of the data request: What is the aim/objective of the data request?"
+        "en": "Project Description"
       },
       "value": "${project-description}"
+    },
+    {
+      "label": "ADDITIONAL_FILTER_CRITERIA",
+      "mandatory": false,
+      "data_type": "LONG_STRING",
+      "display_name": {
+        "en": "Additional filter criteria"
+      },
+      "value": "${additional-filter-criteria}"
+    },
+    {
+      "label": "ETHICS_VOTE_FOR_ALL_SITES",
+      "mandatory": false,
+      "data_type": "STRING",
+      "value": "${ethics-vote-for-all-sites-filename}"
+    },
+    {
+      "label": "QUERIED_SITES",
+      "mandatory": false,
+      "data_type": "STRING",
+      "display_name": {
+        "en": "Selected Sites"
+      },
+      "value": "${queried-sites}"
+    },
+    {
+      "label": "ETHICS_VOTE",
+      "mandatory": false,
+      "active": false,
+      "data_type": "LONG_STRING",
+      "display_name": {
+        "en": "Ethics vote per site"
+      },
+      "description": {
+        "en": "Per-site ethics vote status, where a request may need one per queried site rather than a single vote for all sites"
+      },
+      "value": "${ethics-votes-per-site}"
     }
   ]
 }
