@@ -9,6 +9,7 @@ setdefault FRONTEND_SITES_PROJECTMINUSDASHBOARD "/"
 setdefault FRONTEND_SITES_PROJECTMINUSVIEW "/project-view"
 setdefault ASSETS_DIRECTORY "/app/frontend/assets"
 
+setdefault FRONTEND_VARIABLES_FAVICON_URL "${BACKEND_BASEURL}/assets/favicon.png"
 setdefault FRONTEND_VARIABLES_LOGO_URL "${BACKEND_BASEURL}/assets/cce-logo.svg"
 setdefault FRONTEND_VARIABLES_PROJECT_URL "https://www.cancercoreeurope.eu/"
 setdefault FRONTEND_VARIABLES_LOGO_TEXT "cce"
