@@ -74,6 +74,7 @@
       "label": "planned-start-date",
       "mandatory": false,
       "data_type": "DATE",
+      "display_format": "LONG_DATE_FORMAT",
       "display_name": {
         "en": "Planned Start Date of the Project",
         "de": "Planned Start Date of the Project"
@@ -83,6 +84,7 @@
       "label": "planned-end-date",
       "mandatory": false,
       "data_type": "DATE",
+      "display_format": "LONG_DATE_FORMAT",
       "display_name": {
         "en": "Planned End Date of the Project",
         "de": "Planned End Date of the Project"
