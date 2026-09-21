@@ -52,7 +52,9 @@ fi
 while IFS='|' read -r id human; do
     generate_bridgehead "$id" "$human"
 done <<EOF
-cce-dkfz|DKFZ
+cce-dkfz|DKFZ (Test)
+cce-dkfz-nct|DKFZ/NCT
+cce-master|DKFZ
 cce-gr|GR
 cce-vhio|VHIO
 cce-cruk-cc-dev|CCC (Dev)
