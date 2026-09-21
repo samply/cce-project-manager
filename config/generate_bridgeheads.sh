@@ -52,15 +52,15 @@ fi
 while IFS='|' read -r id human; do
     generate_bridgehead "$id" "$human"
 done <<EOF
-cce-dkfz|DKFZ (Test)
-cce-dkfz-nct|DKFZ/NCT
-cce-master|DKFZ
-cce-gr|GR
-cce-vhio|VHIO
-cce-cruk-cc-dev|CCC (Dev)
-cce-cruk-cc|CCC
-cce-ki|KI
-cce-nki|NKI
+cce-dkfz|German Cancer Research Center (Test)
+cce-dkfz-nct|German Cancer Research Center / National Center for Tumor Diseases
+cce-master|German Cancer Research Center
+cce-gr|Gustave Roussy
+cce-vhio|Vall d'Hebron Institute of Oncology
+cce-cruk-cc-dev|Cancer Research UK Cambridge Centre (Dev)
+cce-cruk-cc|Cancer Research UK Cambridge Centre
+cce-ki|Karolinska Institutet
+cce-nki|Netherlands Cancer Institute
 EOF
 
 # Contact data: bridgehead-id|contact-index|language|name|description|email-address
