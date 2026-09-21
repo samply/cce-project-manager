@@ -56,6 +56,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Group fields in samples from the template
 - Form config
 - Development Environment
+- Configurable localized display formats without database or form-value persistence changes
+- Localized DATE values in generated form PDFs
 - Samples as service in configuration
 - Project and Forms configuration
 - Output format and template id in samples config
@@ -90,6 +92,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Exporter cron expression every 30 seconds
 - Rename project state CREATED and ACCEPTED as REVIEW and APPROVAL
 - Docker VerbIS User for Gitlab CI
+- Localized display-format configuration
 
 ### Fixed
 - Avoid splitting fields in samples from the template
