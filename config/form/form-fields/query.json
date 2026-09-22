@@ -15,6 +15,10 @@
       "properties": [
         "KEEP_FIXED_FIELD_ORDER"
       ],
+      "display_name": {
+        "en": "Additional criteria",
+        "de": "Zusätzliche Kriterien"
+      },
       "description": {
         "en": "Please provide any additional filter criteria not available in the Explorer, or any further notes about the resources you would like to request.",
         "de": "TEST: Geben Sie einen kurzen Antragstitel ein."
@@ -29,7 +33,7 @@
         "de": "Kohortengröße"
       },
       "description": {
-        "en": "What is the magnitude of patients (subjects) needed for the planned analysis?",
+        "en": "What is the number of patients (subjects) needed for the planned analysis?",
         "de": "Welche Anzahl an Patienten (Probanden) wird für die geplante Analyse benötigt?"
       }
     },
@@ -96,32 +100,6 @@
       "description": {
         "en": "What is the gender of the eligible donors?",
         "de": "Welches Geschlecht haben die potenziellen Spender?"
-      }
-    },
-    {
-      "label": "disease_code_tumour_entity",
-      "mandatory": false,
-      "data_type": "STRING",
-      "display_name": {
-        "en": "Disease code/tumour entity",
-        "de": "Krankheitscode/Tumorentität"
-      },
-      "description": {
-        "en": "What disease are you studying? Please give a precise code (ICD-10, ORPHA or SNOMED)",
-        "de": "Welche Krankheit untersuchen Sie? Bitte geben Sie einen genauen Code an (ICD-10, ORPHA oder SNOMED)"
-      }
-    },
-    {
-      "label": "tumour_documentation",
-      "mandatory": true,
-      "data_type": "BOOLEAN",
-      "display_name": {
-        "en": "Tumor documentation",
-        "de": "Tumordokumentation"
-      },
-      "description": {
-        "en": "Would you like to request tumour documentation data for your selected cohort?",
-        "de": "Möchten Sie Tumordokumentationsdaten für Ihre ausgewählte Kohorte erhalten?"
       }
     },
     {

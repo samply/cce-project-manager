@@ -48,8 +48,21 @@
         "KEEP_FIXED_FIELD_ORDER"
       ],
       "description": {
-        "en": "Please briefly describe your project in a few words (max 250)",
+        "en": "Please briefly describe your project in a few words (max 500)",
         "de": "TEST: Geben Sie einen kurzen Antragstitel ein."
+      }
+    },
+    {
+      "label": "methodology",
+      "mandatory": true,
+      "data_type": "STRING",
+      "display_name": {
+        "en": "Planned Data Analysis / Methodology",
+        "de": "Projektmethodik"
+      },
+      "description": {
+        "en": "Please provide a short description of the planned data analysis or methodology for your request (e.g., federated data analysis)",
+        "de": "Bitte geben Sie eine kurze Beschreibung der Analysemethode an, die in Ihrem Projekt zum Einsatz kommen soll (z. B. föderierte Datenanalyse...)"
       }
     },
     {
@@ -155,20 +168,6 @@
       }
     },
     {
-      "label": "principal_investigator_position",
-      "mandatory": true,
-      "data_type": "STRING",
-      "block": "principal-investigator",
-      "display_name": {
-        "en": "Position / Role",
-        "de": "Position / Role"
-      },
-      "description": {
-        "en": "Position or Role of the principal investigator",
-        "de": "Position oder Role des Hauptverantwortlichen"
-      }
-    },
-    {
       "label": "principal_investigator_email",
       "mandatory": true,
       "data_type": "STRING",
@@ -239,20 +238,6 @@
       }
     },
     {
-      "label": "collaborator-role",
-      "mandatory": false,
-      "data_type": "STRING",
-      "block": "collaborators",
-      "display_name": {
-        "en": "Position / Role",
-        "de": "Position / Role"
-      },
-      "description": {
-        "en": "Position or Role of the collaborator",
-        "de": "Position oder Role des Kooperationspartners"
-      }
-    },
-    {
       "label": "collaborator-email",
       "mandatory": false,
       "data_type": "STRING",
@@ -265,59 +250,6 @@
         "en": "Contact email address of the collaborator",
         "de": "Kontakt-E-Mail-Adresse des Kooperationspartners"
       }
-    },
-    {
-      "label": "methodology",
-      "mandatory": true,
-      "data_type": "STRING",
-      "display_name": {
-        "en": "Planned Data Analysis / Methodology",
-        "de": "Projektmethodik"
-      },
-      "description": {
-        "en": "Please provide a short description of the planned data analysis or methodology for your request (e.g., federated data analysis)",
-        "de": "Bitte geben Sie eine kurze Beschreibung der Analysemethode an, die in Ihrem Projekt zum Einsatz kommen soll (z. B. föderierte Datenanalyse...)"
-      }
-    },
-    {
-      "label": "expected-outputs",
-      "mandatory": true,
-      "data_type": "ENUM",
-      "properties": ["CHECK_BOX"],
-      "display_name": {
-        "en": "Expected Outputs",
-        "de": "Expected Outputs"
-      },
-      "allowed_values": [
-        {
-          "label": "publication",
-          "display_name": {
-            "en": "Publication",
-            "de": "Publication"
-          }
-        },
-        {
-          "label": "conference-presentation",
-          "display_name": {
-            "en": "Conference Presentation",
-            "de": "Conference Presentation"
-          }
-        },
-        {
-          "label": "grant-application",
-          "display_name": {
-            "en": "Grant Application",
-            "de": "Grant Application"
-          }
-        },
-        {
-          "label": "other",
-          "display_name": {
-            "en": "Other",
-            "de": "Other"
-          }
-        }
-      ]
     }
   ]
 }

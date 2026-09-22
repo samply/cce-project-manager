@@ -15,7 +15,7 @@
       "data_type": "STRING",
       "display_name": {
         "en": "Ethics Approval Status",
-        "de": "Titel"
+        "de": "Ethics Approval Status"
       },
       "description": {
         "en": "Academic title of the principal investigator",
@@ -67,7 +67,7 @@
         "en": "If approved, please attach the Ethics Form (optional)",
         "de": "TEST: Geben Sie einen kurzen Antragstitel ein (optional)."
       },
-      "condition": "['ethics']['ethics_approval_status']['value'] == 'approved'"
+      "condition": "['ethics']['ethics_approval_status']['value'] == 'approved' || ['ethics']['ethics_approval_status']['value'] == 'pending'"
     }
   ]
 }
