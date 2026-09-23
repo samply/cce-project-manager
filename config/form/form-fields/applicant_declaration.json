@@ -23,7 +23,7 @@
           "label": "ethics_confirmation_label",
           "display_name": {
             "en": "I confirm that the information provided in this data request is accurate and complete.",
-            "de": "I confirm that the requested data will be used exclusively for the purpose described in this application and in compliance with applicable data protection and governance requirements."
+            "de": "Ich bestätige, dass die in dieser Datenanfrage gemachten Angaben richtig und vollständig sind."
           }
         }
       ]

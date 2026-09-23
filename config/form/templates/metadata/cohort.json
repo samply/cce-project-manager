@@ -17,10 +17,6 @@
     "pdf": "cohort-${project-code}-${timestamp}.pdf"
   },
   "template_file": "request",
-  "form_titles": [
-    "project",
-    "query"
-  ],
   "template": "cohort",
   "display_name": {
     "en": "Data request"
@@ -63,7 +59,27 @@
       "value": "${project-creation-date}"
     },
     {
+      "label": "QUERIED_SITES",
+      "form_title": "query",
+      "mandatory": false,
+      "data_type": "STRING",
+      "display_name": {
+        "en": "Selected Sites"
+      },
+      "value": "${queried-sites}"
+    },
+    {
+      "label": "ADDITIONAL_FILTER_CRITERIA",
+      "mandatory": false,
+      "data_type": "LONG_STRING",
+      "display_name": {
+        "en": "Additional filter criteria"
+      },
+      "value": "${additional-filter-criteria}"
+    },
+    {
       "label": "PROJECT_TITLE",
+      "form_title": "project",
       "mandatory": true,
       "data_type": "STRING",
       "display_name": {
@@ -81,28 +97,10 @@
       "value": "${project-description}"
     },
     {
-      "label": "ADDITIONAL_FILTER_CRITERIA",
-      "mandatory": false,
-      "data_type": "LONG_STRING",
-      "display_name": {
-        "en": "Additional filter criteria"
-      },
-      "value": "${additional-filter-criteria}"
-    },
-    {
       "label": "ETHICS_VOTE_FOR_ALL_SITES",
       "mandatory": false,
       "data_type": "STRING",
       "value": "${ethics-vote-for-all-sites-filename}"
-    },
-    {
-      "label": "QUERIED_SITES",
-      "mandatory": false,
-      "data_type": "STRING",
-      "display_name": {
-        "en": "Selected Sites"
-      },
-      "value": "${queried-sites}"
     },
     {
       "label": "ETHICS_VOTE",
