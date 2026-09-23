@@ -50,7 +50,7 @@
 <table class="header-table">
     <tr>
         <td class="header-col-left">
-            <img th:src="@{assets/cce-logo.png}" alt="CCE Logo" class="logo-cce"/>
+            <!-- <img th:src="@{assets/cce-logo.png}" alt="CCE Logo" class="logo-cce"/> -->
             <div class="title-container">
                 <h1 th:text="${#vars['form-title']}">DATA REQUEST FORM</h1>
                 <p class="status" th:text="'Status: ' + ${#vars['project-creation-date']}" >Status</p>
@@ -58,16 +58,16 @@
         </td>
 
         <td class="header-col-right">
-            <img th:src="@{assets/dkfz-logo.png}" alt="DKFZ Logo" class="logo-dkfz"/>
+            <img th:src="@{assets/cce-logo.png}" alt="CCE Logo" class="logo-cce"/>
+            <!-- <img th:src="@{assets/dkfz-logo.png}" alt="DKFZ Logo" class="logo-dkfz"/> -->
         </td>
     </tr>
 </table>
 
 <div class="intro-section">
-    <p>Thank you for your interest in obtaining data samples through the Virtual Data Center of CCE.</p>
+    <p>Thank you for your interest in obtaining data through the Virtual Data Center of CCE.</p>
     <p>
-        To request samples directly from any of the CCE sites please provide the following information
-        – as a basis for a smooth process:
+        To request data from any of the CCE sites please provide the following information:
     </p>
 </div>
 
@@ -75,7 +75,7 @@
     <table th:replace="~{fragments/form-fields :: fieldsTable(fields=${fields}, layoutRows=${layoutFieldRows})}"></table>
 </form>
 
-<p class="obligatory-note">*) Obligatory information</p>
+<p class="obligatory-note">* Mandatory information</p>
 
 <div class="footer-section">
     <p>
