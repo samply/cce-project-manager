@@ -79,8 +79,8 @@
       "mandatory": false,
       "data_type": "STRING",
       "display_name": {
-        "en": "Project Duration",
-        "de": "Project Duration"
+        "en": "Project duration (in months)",
+        "de": "Project duration (in months)"
       }
     },
     {
@@ -107,8 +107,8 @@
       "label": "QUERIED_SITES",
       "field_type": "FIXED",
       "description": {
-        "en": "Sites selected in the Explorer having samples or data matching your search criteria.",
-        "de": "Sites selected in the Explorer having samples or data matching your search criteria."
+        "en": "Selected sites matching your search criteria in the Explorer.",
+        "de": "Selected sites matching your search criteria in the Explorer."
       }
     },
     {
@@ -197,7 +197,7 @@
     },
     {
       "label": "collaborator-first-name",
-      "mandatory": false,
+      "mandatory": true,
       "data_type": "STRING",
       "block": "collaborators",
       "display_name": {
@@ -211,7 +211,7 @@
     },
     {
       "label": "collaborator-last-name",
-      "mandatory": false,
+      "mandatory": true,
       "data_type": "STRING",
       "block": "collaborators",
       "display_name": {
@@ -225,7 +225,7 @@
     },
     {
       "label": "collaborator-affiliation",
-      "mandatory": false,
+      "mandatory": true,
       "data_type": "STRING",
       "block": "collaborators",
       "display_name": {
@@ -239,7 +239,7 @@
     },
     {
       "label": "collaborator-email",
-      "mandatory": false,
+      "mandatory": true,
       "data_type": "STRING",
       "block": "collaborators",
       "display_name": {

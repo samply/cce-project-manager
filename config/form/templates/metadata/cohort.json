@@ -30,7 +30,7 @@
       "mandatory": true,
       "data_type": "STRING",
       "display_name": {
-        "en": "Your name and CCE-affiliation"
+        "en": "Name"
       },
       "value": "${creator-name-with-affiliations}"
     },

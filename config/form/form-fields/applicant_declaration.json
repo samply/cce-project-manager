@@ -11,7 +11,7 @@
   "fields": [
     {
       "label": "ethics_confirmation",
-      "mandatory": false,
+      "mandatory": true,
       "data_type": "ENUM",
       "properties": ["CHECK_BOX"],
       "display_name": {
@@ -30,7 +30,7 @@
     },
     {
       "label": "applicant_confirmation",
-      "mandatory": false,
+      "mandatory": true,
       "data_type": "ENUM",
       "properties": ["CHECK_BOX"],
       "display_name": {

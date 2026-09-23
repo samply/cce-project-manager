@@ -1,12 +1,12 @@
 {
   "title": "ethics",
   "display_name": {
-    "en": "Ethics and Compliance",
-    "de": "Projekt"
+    "en": "Ethics Approval",
+    "de": "Ethics Approval"
   },
   "description": {
-    "en": "Information about ethics and compliance",
-    "de": "Bitte geben Sie Informationen zu Ihrem Projekt an"
+    "en": "Information about ethics approval",
+    "de": "Information about ethics approval"
   },
   "fields": [
     {

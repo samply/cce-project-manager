@@ -112,7 +112,7 @@
         "de": "Datenanalysemethode"
       },
       "description": {
-        "en": "Provide a short description of the planned analysis method for the cohort data (e.g. federated data analysis). Who will perform the analysis?",
+        "en": "Provide a short description of the planned analysis method for the cohort data (e.g., federated data analysis). Who will perform the analysis?",
         "de": "Bitte beschreiben Sie kurz die geplante Analysemethode für die Kohortendaten (z. B. föderierte Datenanalyse). Wer wird die Analyse durchführen?"
       }
     }
