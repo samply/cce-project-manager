@@ -12,19 +12,6 @@
     {
       "label": "ethics_approval_status",
       "mandatory": true,
-      "data_type": "STRING",
-      "display_name": {
-        "en": "Ethics Approval Status",
-        "de": "Ethics Approval Status"
-      },
-      "description": {
-        "en": "Academic title of the principal investigator",
-        "de": "Akademischer Titel des Hauptverantwortlichen"
-      }
-    },
-    {
-      "label": "ethics_approval_status",
-      "mandatory": true,
       "data_type": "ENUM",
       "multiple": false,
       "properties": ["RADIO_BUTTON"],
@@ -67,7 +54,7 @@
         "en": "If approved, please attach the Ethics Form (optional)",
         "de": "TEST: Geben Sie einen kurzen Antragstitel ein (optional)."
       },
-      "condition": "['ethics']['ethics_approval_status']['value'] == 'approved' || ['ethics']['ethics_approval_status']['value'] == 'pending'"
+      "condition": "['ethics']['ethics_approval_status']['value'] matches 'approved|pending'"
     }
   ]
 }
