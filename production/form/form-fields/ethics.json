@@ -52,7 +52,7 @@
       },
       "description": {
         "en": "If approved, please attach the Ethics Form (optional)",
-        "de": "TEST: Geben Sie einen kurzen Antragstitel ein (optional)."
+        "de": "Falls genehmigt, fügen Sie bitte das Ethikformular bei (optional)"
       },
       "condition": "['ethics']['ethics_approval_status']['value'] matches 'approved|pending'"
     }
