@@ -20,8 +20,21 @@
         "de": "Zusätzliche Kriterien"
       },
       "description": {
-        "en": "Please provider any additional filters or notes for your resource request.",
+        "en": "Please provider any additional filters or notes for your data request.",
         "de": "TEST: Geben Sie einen kurzen Antragstitel ein."
+      }
+    },
+    {
+      "label": "size",
+      "mandatory": true,
+      "data_type": "INTEGER",
+      "display_name": {
+        "en": "Cohort size",
+        "de": "Kohortengröße"
+      },
+      "description": {
+        "en": "What is the number of patients (subjects) needed for the planned analysis?",
+        "de": "Welche Anzahl an Patienten (Probanden) wird für die geplante Analyse benötigt?"
       }
     },
     {
