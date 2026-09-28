@@ -51,7 +51,7 @@
         "de": ""
       },
       "description": {
-        "en": "If approved, please attach the Ethics Form (optional)",
+        "en": "If approved/pending, please attach the Ethics Form (optional)",
         "de": "Falls genehmigt, fügen Sie bitte das Ethikformular bei (optional)"
       },
       "condition": "['ethics']['ethics_approval_status']['value'] matches 'approved|pending'"
