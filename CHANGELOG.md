@@ -74,6 +74,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Cache config
 - Merge action message proposals and add German translations
 - Favicon as backend environment variable
+- FRONTEND_VARIABLES_SUMMARY_SPACING (compact or airy summary)
 
 
 ### Changed
