@@ -41,6 +41,17 @@ project manager returns the URL of the request with a one-time marker
 `success-message` from `action-messages.json` once and removes the marker:
 `CREATE_QUERY_AND_DESIGN_PROJECT` after creating, `EDIT_PROJECT` after editing.
 
+## Summary spacing
+
+The summary of the request form and the request view can show their fields close together or with the same space as
+while filling in the draft:
+
+| Variable | Content |
+|---|---|
+| `FRONTEND_VARIABLES_SUMMARY_SPACING` | `compact`: half the draft's space between fields; `airy` (default, also for any other value): the draft's space |
+
+This instance uses `compact`.
+
 ## Exporter query label
 
 `EXPORTER_QUERY_LABEL_TEMPLATE` defines the label of the queries sent to the
