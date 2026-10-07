@@ -16,7 +16,9 @@ setdefault FRONTEND_VARIABLES_LOGO_TEXT "cce"
 setdefault FRONTEND_VARIABLES_LOGO_CSS "${BACKEND_BASEURL}/assets/logo.css"
 setdefault FRONTEND_VARIABLES_FRONTEND_NAME "<b>CCE VDC</b> Data Request"
 setdefault FRONTEND_VARIABLES_PAGE_TITLE "Data Request"
-setdefault FRONTEND_VARIABLES_FEASIBILITY_PAGE_SIZE "5"
+# Sites per page of the feasibility table: the number of sites in production/generate_bridgeheads.sh (9), so that
+# all sites fit on one page (no pagination). Not derived automatically: update it when sites are added.
+setdefault FRONTEND_VARIABLES_FEASIBILITY_PAGE_SIZE "9"
 # Width of the feasibility table: compact (at least 32rem, default), medium (at least 48rem) or full (whole card).
 setdefault FRONTEND_VARIABLES_FEASIBILITY_TABLE_WIDTH "compact"
 # Alignment of the feasibility table's value columns: standard (numbers right, text left, default), left or right.
