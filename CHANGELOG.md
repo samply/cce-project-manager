@@ -75,6 +75,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Merge action message proposals and add German translations
 - Favicon as backend environment variable
 - FRONTEND_VARIABLES_SUMMARY_SPACING (compact or airy summary)
+- FRONTEND_VARIABLES_FEASIBILITY_TABLE_WIDTH (compact, medium or full feasibility table)
+- FRONTEND_VARIABLES_FEASIBILITY_TABLE_ALIGNMENT (standard, left or right feasibility values)
 
 
 ### Changed
