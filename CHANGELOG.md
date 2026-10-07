@@ -96,6 +96,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Rename project state CREATED and ACCEPTED as REVIEW and APPROVAL
 - Docker VerbIS User for Gitlab CI
 - Localized display-format configuration
+- FRONTEND_VARIABLES_FEASIBILITY_PAGE_SIZE = 9 (the number of sites): the feasibility table without pagination
 
 ### Fixed
 - Avoid splitting fields in samples from the template
