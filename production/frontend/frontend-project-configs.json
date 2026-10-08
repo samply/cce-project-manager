@@ -13,7 +13,7 @@
     "Export": {
       "project": {
         "label": "Data Export",
-        "description": "Specify and request the datasets that you would like to be exported at the different sites for you in an anonymised, tabular file format (.csv).",
+        "description": "Specify and request the datasets that you would like to be exported at the different sites for you in an anonymized, tabular file format (.csv).",
         "outputs": [
           {
             "projectType": "EXPORT",

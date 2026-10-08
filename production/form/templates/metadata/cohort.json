@@ -19,14 +19,16 @@
   "template_file": "request",
   "template": "cohort",
   "display_name": {
-    "en": "Data request"
+    "en": "Data request",
+    "de": "Datenanfrage"
   },
   "project_fields": [
     {
       "mandatory": true,
       "data_type": "STRING",
       "display_name": {
-        "en": "Name"
+        "en": "Name",
+        "de": "Name"
       },
       "value": "${creator-name-with-affiliations}"
     },
@@ -34,7 +36,8 @@
       "mandatory": true,
       "data_type": "STRING",
       "display_name": {
-        "en": "Email address"
+        "en": "Email address",
+        "de": "E-Mail-Adresse"
       },
       "value": "${creator-email}"
     },
@@ -42,10 +45,12 @@
       "mandatory": true,
       "data_type": "STRING",
       "display_name": {
-        "en": "Request ID"
+        "en": "Request ID",
+        "de": "Anfrage-ID"
       },
       "description": {
-        "en": "Technical ID for the request"
+        "en": "Technical ID for the request",
+        "de": "Technische ID der Anfrage"
       },
       "value": "${project-code}"
     },
@@ -54,7 +59,8 @@
       "data_type": "DATE",
       "display_format": "LONG_DATE_FORMAT",
       "display_name": {
-        "en": "Request application date"
+        "en": "Request application date",
+        "de": "Antragsdatum der Anfrage"
       },
       "value": "${project-creation-date}"
     },
@@ -64,7 +70,8 @@
       "mandatory": false,
       "data_type": "STRING",
       "display_name": {
-        "en": "Selected Sites"
+        "en": "Selected Sites",
+        "de": "Ausgewählte Standorte"
       },
       "value": "${queried-sites}"
     },
@@ -73,7 +80,8 @@
       "mandatory": false,
       "data_type": "LONG_STRING",
       "display_name": {
-        "en": "Additional filter criteria"
+        "en": "Additional filter criteria",
+        "de": "Zusätzliche Filterkriterien"
       },
       "value": "${additional-filter-criteria}"
     },
@@ -83,7 +91,8 @@
       "mandatory": true,
       "data_type": "STRING",
       "display_name": {
-        "en": "Project Title"
+        "en": "Project Title",
+        "de": "Projekttitel"
       },
       "value": "${project-title}"
     },
@@ -92,7 +101,8 @@
       "mandatory": true,
       "data_type": "STRING",
       "display_name": {
-        "en": "Project Description"
+        "en": "Project Description",
+        "de": "Projektbeschreibung"
       },
       "value": "${project-description}"
     },
@@ -108,10 +118,12 @@
       "active": false,
       "data_type": "LONG_STRING",
       "display_name": {
-        "en": "Ethics vote per site"
+        "en": "Ethics vote per site",
+        "de": "Ethikvotum pro Standort"
       },
       "description": {
-        "en": "Per-site ethics vote status, where a request may need one per queried site rather than a single vote for all sites"
+        "en": "Per-site ethics vote status, where a request may need one per queried site rather than a single vote for all sites.",
+        "de": "Status des Ethikvotums pro Standort, wenn eine Anfrage statt eines einzigen Votums für alle Standorte eines pro abgefragtem Standort benötigt."
       },
       "value": "${ethics-votes-per-site}"
     }

@@ -2,11 +2,11 @@
   "title": "funding",
   "display_name": {
     "en": "Funding and Conflicts of Interest",
-    "de": "Projekt"
+    "de": "Förderung und Interessenkonflikte"
   },
   "description": {
-    "en": "Information about funding and conflicts of interest",
-    "de": "Bitte geben Sie Informationen zu Ihrem Projekt an"
+    "en": "Information about funding and conflicts of interest.",
+    "de": "Informationen zu Förderung und Interessenkonflikten."
   },
   "layouts": [
     {
@@ -37,25 +37,25 @@
       "properties": ["RADIO_BUTTON", "CSS_ENUM"],
       "display_name": {
         "en": "Conflict of Interest",
-        "de": "Conflict of Interest"
+        "de": "Interessenkonflikt"
       },
       "description": {
         "en": "Please declare any conflicts of interest related to the project.",
-        "de": "Please declare any conflicts of interest related to the project."
+        "de": "Bitte geben Sie alle Interessenkonflikte im Zusammenhang mit dem Projekt an."
       },
       "allowed_values": [
         {
           "label": "no_conflict",
           "display_name": {
             "en": "No conflicts of interest",
-            "de": "No conflicts of interest"
+            "de": "Keine Interessenkonflikte"
           }
         },
         {
           "label": "potential_conflicts",
           "display_name": {
             "en": "Potential conflicts disclosed",
-            "de": "Potential conflicts disclosed"
+            "de": "Potenzielle Konflikte offengelegt"
           }
         }
       ]
