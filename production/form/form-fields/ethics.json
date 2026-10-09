@@ -2,11 +2,11 @@
   "title": "ethics",
   "display_name": {
     "en": "Ethics Approval",
-    "de": "Ethics Approval"
+    "de": "Ethikvotum"
   },
   "description": {
-    "en": "Information about ethics approval",
-    "de": "Information about ethics approval"
+    "en": "Information about ethics approval.",
+    "de": "Informationen zum Ethikvotum."
   },
   "fields": [
     {
@@ -17,28 +17,28 @@
       "properties": ["RADIO_BUTTON"],
       "display_name": {
         "en": "Ethics Approval Status",
-        "de": "Ethics Approval Status"
+        "de": "Status des Ethikvotums"
       },
       "allowed_values": [
         {
           "label": "approved",
           "display_name": {
             "en": "Approved",
-            "de": "Approved"
+            "de": "Genehmigt"
           }
         },
         {
           "label": "pending",
           "display_name": {
             "en": "Pending",
-            "de": "Pending"
+            "de": "Ausstehend"
           }
         },
         {
           "label": "not_required",
           "display_name": {
             "en": "Not Required",
-            "de": "Not Required"
+            "de": "Nicht erforderlich"
           }
         }
       ]

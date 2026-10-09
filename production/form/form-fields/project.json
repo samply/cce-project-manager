@@ -2,11 +2,11 @@
   "title": "project",
   "display_name": {
     "en": "Project Information",
-    "de": "Projekt"
+    "de": "Projektinformationen"
   },
   "description": {
-    "en": " Please provide information about your project",
-    "de": "Bitte geben Sie Informationen zu Ihrem Projekt an"
+    "en": "Please provide information about your project.",
+    "de": "Bitte geben Sie Informationen zu Ihrem Projekt an."
   },
   "blocks": [
     {
@@ -30,8 +30,8 @@
         "de": "Kooperationspartner"
       },
       "description": {
-        "en": "If applicable, please provide the names, affiliations, and email addresses of your collaborators at the chosen sites. All fields within a started entry are required.",
-        "de": "Falls zutreffend, geben Sie bitte die Namen, Zugehörigkeiten und E-Mail-Adressen Ihrer Kooperationspartner an den ausgewählten Standorten an. Alle Felder innerhalb eines begonnenen Eintrags sind erforderlich."
+        "en": "If applicable, please provide the names, affiliations, and email addresses of your collaborators at the chosen sites. If you add a collaborator, their first name, last name, affiliation, and email address are required.",
+        "de": "Falls zutreffend, geben Sie bitte die Namen, Zugehörigkeiten und E-Mail-Adressen Ihrer Kooperationspartner an den ausgewählten Standorten an. Wenn Sie einen Kooperationspartner hinzufügen, sind Vorname, Nachname, Zugehörigkeit und E-Mail-Adresse erforderlich."
       }
     }
   ],
@@ -48,8 +48,8 @@
         "KEEP_FIXED_FIELD_ORDER"
       ],
       "description": {
-        "en": "Please briefly describe your project in a few words (max 500)",
-        "de": "Bitte beschreiben Sie Ihr Projekt kurz in wenigen Worten (max. 500)"
+        "en": "Please briefly describe your project (max. 500 words).",
+        "de": "Bitte beschreiben Sie Ihr Projekt kurz (max. 500 Wörter)."
       }
     },
     {
@@ -57,12 +57,12 @@
       "mandatory": true,
       "data_type": "STRING",
       "display_name": {
-        "en": "Data Analysis methodology",
-        "de": "Projektmethodik"
+        "en": "Data analysis methodology",
+        "de": "Methodik der Datenanalyse"
       },
       "description": {
-        "en": "Please provide a short description of the analysis method planned for use in your data request (e.g., federated data analysis)",
-        "de": "Bitte geben Sie eine kurze Beschreibung der Analysemethode an, die in Ihrem Projekt zum Einsatz kommen soll (z. B. föderierte Datenanalyse...)"
+        "en": "Please provide a short description of the analysis method planned for use in your data request (e.g., federated data analysis).",
+        "de": "Bitte geben Sie eine kurze Beschreibung der Analysemethode an, die für Ihre Datenanfrage geplant ist (z. B. föderierte Datenanalyse)."
       }
     },
     {
@@ -71,7 +71,7 @@
       "data_type": "STRING",
       "display_name": {
         "en": "Research Objective(s)",
-        "de": "Research Objective(s)"
+        "de": "Forschungsziel(e)"
       }
     },
     {
@@ -80,7 +80,7 @@
       "data_type": "STRING",
       "display_name": {
         "en": "Project duration (in months)",
-        "de": "Project duration (in months)"
+        "de": "Projektdauer (in Monaten)"
       }
     },
     {
@@ -90,7 +90,7 @@
       "display_format": "LONG_DATE_FORMAT",
       "display_name": {
         "en": "Planned Start Date of the Project",
-        "de": "Planned Start Date of the Project"
+        "de": "Geplantes Startdatum des Projekts"
       }
     },
     {
@@ -100,7 +100,7 @@
       "display_format": "LONG_DATE_FORMAT",
       "display_name": {
         "en": "Planned End Date of the Project",
-        "de": "Planned End Date of the Project"
+        "de": "Geplantes Enddatum des Projekts"
       }
     },
     {
@@ -108,7 +108,7 @@
       "field_type": "FIXED",
       "description": {
         "en": "Selected sites matching your search criteria in the Explorer.",
-        "de": "Selected sites matching your search criteria in the Explorer."
+        "de": "Ausgewählte Standorte, die Ihren Suchkriterien im Explorer entsprechen."
       }
     },
     {
@@ -163,7 +163,7 @@
         "de": "Zugehörigkeit"
       },
       "description": {
-        "en": "Institution or organisation of the principal investigator",
+        "en": "Institution or organization of the principal investigator",
         "de": "Institution oder Organisation des Hauptverantwortlichen"
       }
     },
@@ -233,7 +233,7 @@
         "de": "Zugehörigkeit"
       },
       "description": {
-        "en": "Institution or organisation of the collaborator",
+        "en": "Institution or organization of the collaborator",
         "de": "Institution oder Organisation des Kooperationspartners"
       }
     },
