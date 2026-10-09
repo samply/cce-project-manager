@@ -101,6 +101,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Development: ENABLE_EXPORTER, ENABLE_FEASIBILITY and ENABLE_EMAILS = test (test implementations without Beam and SMTP; EMAILS_TEST_LOG=summary); README section "Optional modules"
 - Removed the research environment and DataSHIELD configuration (both disabled here): CODER_*, APP_REGISTER_*, TOKEN_MANAGER_URL, MANAGE_TOKENS_CRON_EXPRESSION, production/coder/*.json and the block of dummy values for disabled modules. A working version for demo-project-manager: master-project-manager, commit 17579fd (branch feat/optional-modules, 2026-10-08, new variable names; with the old names ENABLE_CODER/ENABLE_TOKEN_MANAGER also on main, d738236)
 - Removed variables the backend does not read: CODER_MEMBER_ID (only a placeholder inside CODER_CREATE_PATH), CODER_TEMPLATE_VERSION_ID, ENABLE_RSTUDIO_GROUP_MANAGER
+- Optional modules are opt-in in the backend (unset = disabled): only the enabled modules are set; ENABLE_FEASIBILITY=true added to production (was enabled through the former default), ENABLE_RESEARCH_ENVIRONMENT=false and ENABLE_DATASHIELD=false removed
 
 ### Fixed
 - Avoid splitting fields in samples from the template
