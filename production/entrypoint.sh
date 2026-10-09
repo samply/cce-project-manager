@@ -23,11 +23,10 @@ setdefault TEST_EMAIL_DOMAINS "test.dkfz.de"
 # Export other environment variables:
 
 setdefault LOG_LEVEL "INFO"
-setdefault ENABLE_CODER "false"
+setdefault ENABLE_RESEARCH_ENVIRONMENT "false"
 setdefault ENABLE_EMAILS "true"
 setdefault ENABLE_EXPORTER "true"
-setdefault ENABLE_TOKEN_MANAGER "false"
-setdefault ENABLE_APP_REGISTER "false"
+setdefault ENABLE_DATASHIELD "false"
 setdefault SECURITY_ENABLED "true"
 
 # Select cache policy: beta during active development; stable after release.
@@ -59,18 +58,6 @@ setdefault RESEARCHER_GROUPS "/projects/cce/vdc"
 
 setdefault CHECK_EXPIRED_ACTIVE_PROJECTS_CRON_EXPRESSION "30 * * * * *"
 
-setdefault CODER_PATH_DATASHIELD "/app/coder/coder-datashield.json"
-setdefault CODER_PATH_RESEARCHUNDERSCOREENVIRONMENT "/app/coder/coder-research-environment.json"
-setdefault CODER_BASE_URL "https://dev.samply.de"
-setdefault CODER_TEST_FILE_BEAM_ID ""
-# export CODER_BEAM_ID_SUFFIX="proxy1.broker.ccp-it.dktk.dkfz.de" #################################### <= Please configure me
-setdefault CODER_CREATE_PATH "/organizations/{CODER_ORGANISATION_ID}/members/{CODER_MEMBER_ID}/workspaces"
-setdefault CODER_CRON_EXPRESSION "15 * * * * *"
-setdefault CODER_DELETE_PATH "/workspaces/{CODER_WORKSPACE_ID}/builds"
-# export CODER_MEMBER_ID="XXXX" #################################### <= Please configure me
-# export CODER_ORGANISATION_ID="XXXX" #################################### <= Please configure me
-# export CODER_SESSION_TOKEN="XXXX" #################################### <= Please configure me
-setdefault CODER_TEMPLATE_VERSION_ID "b105a87d-19a4-40d0-bc00-f444976868da"
 
 setdefault DATASHIELD_TEMPLATES "opal-ccp"
 setdefault DB_ENCRYPTION_ALGORITHM "AES"
@@ -91,7 +78,6 @@ setdefault FEASIBILITY_MAPPING '[{"label": "Patients", "value": .totals.patients
 # Load frontend-related environment variables into the current shell.
 . /app/frontend/frontend-environment.sh
 
-setdefault MANAGE_TOKENS_CRON_EXPRESSION "0 * * * * *"
 
 setdefault JWT_GROUPS_CLAIM "groups"
 # export OIDC_CLIENT_ID="XXXX" #################################### <= Please configure me
@@ -109,18 +95,6 @@ setdefault SPRING_MAIL_PRIMARY_HOST "mx-ext.inet.dkfz-heidelberg.de"
 # export SPRING_MAIL_PRIMARY_PASSWORD=""
 setdefault SPRING_MAIL_PRIMARY_PORT "25"
 # export SPRING_MAIL_PRIMARY_USERNAME=""
-
-# export TOKEN_MANAGER_URL="http://token-manager:3030" #################################### <= Please configure me
-
-
-# Ignore these variables. TODO: Remove after disable module in project manager doesn't require disabled module variables
-setdefault APP_REGISTER_BASE_URL "http://beam-register:3000"
-setdefault APP_REGISTER_API_KEY "XXX"
-setdefault CODER_MEMBER_ID "XXX"
-setdefault CODER_ORGANISATION_ID "XXX"
-setdefault CODER_SESSION_TOKEN "XXX"
-setdefault CODER_BEAM_ID_SUFFIX "XXX"
-setdefault TOKEN_MANAGER_URL "http://token-manager:3030"
 
 
 # Generate bridgehead exports
