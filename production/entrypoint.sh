@@ -23,10 +23,9 @@ setdefault TEST_EMAIL_DOMAINS "test.dkfz.de"
 # Export other environment variables:
 
 setdefault LOG_LEVEL "INFO"
-setdefault ENABLE_RESEARCH_ENVIRONMENT "false"
 setdefault ENABLE_EMAILS "true"
 setdefault ENABLE_EXPORTER "true"
-setdefault ENABLE_DATASHIELD "false"
+setdefault ENABLE_FEASIBILITY "true"
 setdefault SECURITY_ENABLED "true"
 
 # Select cache policy: beta during active development; stable after release.
