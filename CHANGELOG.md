@@ -103,6 +103,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Removed variables the backend does not read: CODER_MEMBER_ID (only a placeholder inside CODER_CREATE_PATH), CODER_TEMPLATE_VERSION_ID, ENABLE_RSTUDIO_GROUP_MANAGER
 - Optional modules are opt-in in the backend (unset = disabled): only the enabled modules are set; ENABLE_FEASIBILITY=true added to production (was enabled through the former default), ENABLE_RESEARCH_ENVIRONMENT=false and ENABLE_DATASHIELD=false removed
 - Project state APPROVAL renamed CENTRAL_APPROVAL (action messages); needs the backend with the same rename
+- ENABLE_LOCAL_APPROVAL=true (production and development): local approval of each site after the central approval
+- Development: example approval contacts per site (BRIDGEHEADS_CONFIG_<SITE>_APPROVALCONTACTS_<n>_NAME_EN|DE, _DESCRIPTION_EN|DE, _EMAILADDRESS); production: to be added per site
 
 ### Fixed
 - Avoid splitting fields in samples from the template
