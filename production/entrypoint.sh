@@ -26,6 +26,7 @@ setdefault LOG_LEVEL "INFO"
 setdefault ENABLE_EMAILS "true"
 setdefault ENABLE_EXPORTER "true"
 setdefault ENABLE_FEASIBILITY "true"
+setdefault ENABLE_LOCAL_APPROVAL "true"
 setdefault SECURITY_ENABLED "true"
 
 # Select cache policy: beta during active development; stable after release.

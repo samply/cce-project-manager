@@ -13,6 +13,7 @@ its settings. Details: `docs/optional-modules.md` in project-manager.
 | `ENABLE_RESEARCH_ENVIRONMENT` | Research environment workspaces (Coder) | - | - |
 | `ENABLE_DATASHIELD` | DataSHIELD tokens (token manager); needs the research environment | - | - |
 | `ENABLE_EXTERNAL_EXECUTION` | Site admins execute a request's query at their site directly | - | - |
+| `ENABLE_LOCAL_APPROVAL` | Local approval of each site after the central approval (document per site) | `true` | `true` |
 
 Modules are opt-in: a module whose variable is not set (`-`) or empty is disabled. Values: `true`, `false`, or `test`
 for exporter, feasibility and emails - a test implementation for development without the external systems:
@@ -114,6 +115,7 @@ This instance uses `compact`.
 | Variable | Content |
 |---|---|
 | `FRONTEND_VARIABLES_FEASIBILITY_TABLE_ALIGNMENT` | `standard`, `left` or `right`, see below |
+| `FRONTEND_VARIABLES_LOCAL_APPROVAL_REQUIRED` | `true`: every site needs its local approval - the request cannot skip it, a missing one is red, the site cannot send the query without it (only in the UI); otherwise a missing local approval is "not provided" |
 
 | Value | Value columns (header included) |
 |---|---|

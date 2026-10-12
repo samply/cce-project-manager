@@ -102,6 +102,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Removed the research environment and DataSHIELD configuration (both disabled here): CODER_*, APP_REGISTER_*, TOKEN_MANAGER_URL, MANAGE_TOKENS_CRON_EXPRESSION, production/coder/*.json and the block of dummy values for disabled modules. A working version for demo-project-manager: master-project-manager, commit 17579fd (branch feat/optional-modules, 2026-10-08, new variable names; with the old names ENABLE_CODER/ENABLE_TOKEN_MANAGER also on main, d738236)
 - Removed variables the backend does not read: CODER_MEMBER_ID (only a placeholder inside CODER_CREATE_PATH), CODER_TEMPLATE_VERSION_ID, ENABLE_RSTUDIO_GROUP_MANAGER
 - Optional modules are opt-in in the backend (unset = disabled): only the enabled modules are set; ENABLE_FEASIBILITY=true added to production (was enabled through the former default), ENABLE_RESEARCH_ENVIRONMENT=false and ENABLE_DATASHIELD=false removed
+- Project state APPROVAL renamed CENTRAL_APPROVAL (action messages); needs the backend with the same rename
+- ENABLE_LOCAL_APPROVAL=true (production and development): local approval of each site after the central approval
+- Development: example approval contacts per site (BRIDGEHEADS_CONFIG_<SITE>_APPROVALCONTACTS_<n>_NAME_EN|DE, _DESCRIPTION_EN|DE, _EMAILADDRESS); production: to be added per site
+- Email templates of the local approval (EN): LOCAL_APPROVAL_STARTED (approval contacts with the form, creator, bridgehead admins), NEW_LOCAL_APPROVAL, NEW_LOCAL_APPROVAL_FINAL (bridgehead admin: export now), PROJECT_BACK_TO_REVIEW (creator)
+- Action messages of the local approval: START_LOCAL_APPROVAL_STAGE, START_FINAL_STAGE in LOCAL_APPROVAL, BACK_TO_REVIEW, UPLOAD_LOCAL_APPROVAL
+- README: FRONTEND_VARIABLES_LOCAL_APPROVAL_REQUIRED (local approval mandatory, UI only)
+- FRONTEND_VARIABLES_LOCAL_APPROVAL_REQUIRED="false" in production (frontend-environment.sh) and development: the local approval is not mandatory for now
 
 ### Fixed
 - Avoid splitting fields in samples from the template
