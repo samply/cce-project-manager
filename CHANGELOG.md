@@ -10,6 +10,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   `production/` restart the backend started from the IDE; needs a backend with `spring-boot-devtools`
 - Release workflow: when a new version section of `CHANGELOG.md` reaches `main`, the tag `vX.Y.Z`, the GitHub
   release (notes = that section) and the version images are created automatically
+### Changed
+- Project manager admins and bridgehead admins come from the VerbIS Keycloak groups
+  `/projects/cce/project-manager-admin` and `/projects/cce/sites/<bridgehead id>/admin` (`PM_ADMIN_GROUPS`,
+  `BK_*_GROUP_*`); the old groups `cce-requester-admin` and `CCE_<site>[_Verwalter]` did not exist in Keycloak
+- Researchers: everyone with the Explorer app `/apps/cce-federated-explorer` (`RESEARCHER_GROUPS`, was
+  `/projects/cce/vdc`), also when the Explorer was granted by hand
+- Groups are written as Keycloak shows them, with the leading slash: needs a backend that ignores it in every group
+  setting (project-manager after 1.0.0, CHANGELOG "Group settings ... with or without the leading slash"); the next
+  release of this configuration must build on such a backend release, not on 1.0.0
 
 ## [1.0.0] - 2026-10-16
 ### Added
