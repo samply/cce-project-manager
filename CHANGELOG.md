@@ -8,11 +8,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Local development: the group `dev-central-committee` gives the central approval committee role
   (`CENTRAL_APPROVAL_COMMITTEE_GROUPS` in `development/development.env`); needs a backend with the committee role
+- Local development: the UI names the committee "CCE Data Access Committee", as the action texts and emails do
+  (`FRONTEND_VARIABLES_CENTRAL_APPROVAL_COMMITTEE_NAME`; needs a UI with the committee role)
+- Messages of the new action "Request changes" (`REQUEST_CHANGES_IN_APPROVAL` in `production/action-messages.json`);
+  `BACK_TO_REVIEW` removed with the action it belonged to
 - Hot reload for local development (`development/development.env`, `SPRING_DEVTOOLS_*`): changes in
   `production/` restart the backend started from the IDE; needs a backend with `spring-boot-devtools`
 - Release workflow: when a new version section of `CHANGELOG.md` reaches `main`, the tag `vX.Y.Z`, the GitHub
   release (notes = that section) and the version images are created automatically
 ### Changed
+- Explanation of "Accept request" in review: request changes in the project manager instead of contacting the
+  applicant directly; the German texts translate the English again (also the one for an archived request)
+- German action texts (`production/action-messages.json`) translate the English again: many explanations were
+  shortened or shared one text for different situations (script download, site authorization, final phase,
+  finishing, assigning users, results URL)
 - Project manager admins and bridgehead admins come from the VerbIS Keycloak groups
   `/projects/cce/project-manager-admin` and `/projects/cce/sites/<bridgehead id>/admin` (`PM_ADMIN_GROUPS`,
   `BK_*_GROUP_*`); the old groups `cce-requester-admin` and `CCE_<site>[_Verwalter]` did not exist in Keycloak
