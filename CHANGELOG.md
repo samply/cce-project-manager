@@ -11,8 +11,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Release workflow: when a new version section of `CHANGELOG.md` reaches `main`, the tag `vX.Y.Z`, the GitHub
   release (notes = that section) and the version images are created automatically
 - `DEPLOYMENT_ENVIRONMENT` (`PROD` by default, `TEST` on test servers; any other value stops the start):
-  `setdefault <variable> <production default> [<test default>]` gives test servers their own defaults (none yet)
+  `setdefault <variable> <production default> [<test default>]` gives test servers their own defaults
+- Bridgeheads per server: `production/generate_bridgeheads.sh` lists `id|human-readable|environments|group`; a server
+  offers the bridgeheads of its `DEPLOYMENT_ENVIRONMENT` (README "Bridgeheads")
 ### Changed
+- Bridgeheads follow the Explorer (project-manager-ops `bridgeheads/cce.md`): cce-dkfz, cce-dkfz-nct and
+  cce-cruk-cc-dev only on test servers (the Explorer does not query them), cce-cruk-cc only in production; production request.cce.dkfz.de runs
+  `DEPLOYMENT_ENVIRONMENT=TEST` while the sites test it. Names of the Explorer: Cancer Research UK Cambridge Center
+  (cce-cruk-cc-dev), Cancer Research UK Cambridge Center (Prod) (cce-cruk-cc)
+- Feasibility table page size: 6 sites in production, 8 on test servers (`FRONTEND_VARIABLES_FEASIBILITY_PAGE_SIZE`)
+- Contacts are exported only for the bridgeheads the server offers
 - Project manager admins and bridgehead admins come from the VerbIS Keycloak groups
   `/projects/cce/project-manager-admin` and `/projects/cce/sites/<bridgehead id>/admin` (`PM_ADMIN_GROUPS`,
   `BK_*_GROUP_*`); the old groups `cce-requester-admin` and `CCE_<site>[_Verwalter]` did not exist in Keycloak

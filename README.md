@@ -119,6 +119,20 @@ What a deployment must set: `docs/minimal-configuration.md` in project-manager.
 `setdefault <variable> <production default> [<test default>]` (without a test default both get the production one).
 No default differs yet.
 
+## Bridgeheads
+
+`production/generate_bridgeheads.sh` holds every bridgehead of CCE in one list, `id|human-readable|environments|group`:
+
+- **human-readable**: the display name of the Explorer (the Explorer has preference).
+- **environments**: `prod`, `test` or `prod,test`; a server offers the bridgeheads of its `DEPLOYMENT_ENVIRONMENT`.
+- **group**: the site group in Keycloak (`/projects/cce/sites/<group>`, `BRIDGEHEADS_CONFIG_<ID>_GROUP`); empty = the
+  bridgehead id. Several bridgeheads of one site share its group (needs a backend with site groups,
+  project-manager `docs/bridgeheads.md`).
+- Commented rows: bridgeheads not offered at the moment.
+
+Contacts of a bridgehead the server does not offer are left out. The list per bridgehead and the reasons:
+project-manager-ops `bridgeheads/cce.md`.
+
 ## Optional modules
 
 The backend switches parts of its functionality on and off with `ENABLE_*` variables. A disabled module needs none of
