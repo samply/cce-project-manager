@@ -1,5 +1,12 @@
 #!/bin/sh
 
+# PROD (default) or TEST: test servers set DEPLOYMENT_ENVIRONMENT=TEST and get the test defaults below.
+DEPLOYMENT_ENVIRONMENT="${DEPLOYMENT_ENVIRONMENT:-PROD}"
+case "$DEPLOYMENT_ENVIRONMENT" in
+  PROD|TEST) ;;
+  *) echo "DEPLOYMENT_ENVIRONMENT must be PROD or TEST, not '$DEPLOYMENT_ENVIRONMENT'" >&2; exit 1 ;;
+esac
+
 # Every default below is applied with setdefault, so any of them can be
 # overridden by setting the variable in the container environment (e.g. compose
 # `environment:`). Previously these were plain `export VAR=...`, which ran after
@@ -7,9 +14,17 @@
 #
 # A variable that is set but empty counts as unset and takes the default, since
 # compose renders an undefined interpolation as an empty string.
+#
+# Usage: setdefault <variable> <production default> [<test default>]
+# Without a test default, test servers get the production default.
 setdefault() {
   eval "[ -n \"\${$1:-}\" ]" && return 0
-  eval "export $1=\"\$2\""
+  if [ "$DEPLOYMENT_ENVIRONMENT" = "TEST" ] && [ $# -ge 3 ]; then
+    setdefault_value="$3"
+  else
+    setdefault_value="$2"
+  fi
+  eval "export $1=\"\$setdefault_value\""
 }
 
 # Export environment variables with base64-encoded content

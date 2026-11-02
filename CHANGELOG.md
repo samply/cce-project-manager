@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   `production/` restart the backend started from the IDE; needs a backend with `spring-boot-devtools`
 - Release workflow: when a new version section of `CHANGELOG.md` reaches `main`, the tag `vX.Y.Z`, the GitHub
   release (notes = that section) and the version images are created automatically
+- `DEPLOYMENT_ENVIRONMENT` (`PROD` by default, `TEST` on test servers; any other value stops the start):
+  `setdefault <variable> <production default> [<test default>]` gives test servers their own defaults (none yet)
 ### Changed
 - Project manager admins and bridgehead admins come from the VerbIS Keycloak groups
   `/projects/cce/project-manager-admin` and `/projects/cce/sites/<bridgehead id>/admin` (`PM_ADMIN_GROUPS`,
