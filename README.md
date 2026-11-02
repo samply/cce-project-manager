@@ -115,6 +115,10 @@ services:
 Every other setting has a default in `production/entrypoint.sh` and can be overridden with an environment variable.
 What a deployment must set: `docs/minimal-configuration.md` in project-manager.
 
+`DEPLOYMENT_ENVIRONMENT` is `PROD` (default) or `TEST`; test servers set `TEST`. A default can differ between the two:
+`setdefault <variable> <production default> [<test default>]` (without a test default both get the production one).
+No default differs yet.
+
 ## Optional modules
 
 The backend switches parts of its functionality on and off with `ENABLE_*` variables. A disabled module needs none of
