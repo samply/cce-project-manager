@@ -62,7 +62,7 @@ fi
 # - human-readable: the display name of the Explorer (without the flag).
 # - environments: prod, test or prod,test (the servers that offer the bridgehead). The production server
 #   explorer.cce.dkfz.de / request.cce.dkfz.de runs TEST while the sites test it.
-# - group: the site group of the identity provider (/projects/cce/sites/<group>); empty = the id.
+# - group: the group of the identity provider (/projects/cce/bridgeheads/<group>/user, .../admin); empty = the id.
 active_bridgeheads=" "
 while IFS='|' read -r id human environments group; do
     [[ -z "$id" || "$id" == \#* ]] && continue
@@ -75,7 +75,7 @@ cce-dkfz-nct|German Cancer Research Center / National Center for Tumor Diseases|
 cce-master|German Cancer Research Center|prod,test|
 cce-gr|Gustave Roussy|prod,test|
 cce-vhio|Vall d'Hebron Institute of Oncology|prod,test|
-cce-cruk-cc-dev|Cancer Research UK Cambridge Center|test|
+cce-cruk-cc-dev|Cancer Research UK Cambridge Center|test|cce-cruk-cc
 cce-cruk-cc|Cancer Research UK Cambridge Center (Prod)|prod|
 cce-ki|Karolinska Institutet|prod,test|
 cce-nki|Netherlands Cancer Institute|prod,test|
