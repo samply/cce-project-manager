@@ -16,6 +16,8 @@ setdefault FRONTEND_VARIABLES_LOGO_TEXT "cce"
 setdefault FRONTEND_VARIABLES_LOGO_CSS "${BACKEND_BASEURL}/assets/logo.css"
 setdefault FRONTEND_VARIABLES_FRONTEND_NAME "<b>CCE VDC</b> Data Request"
 setdefault FRONTEND_VARIABLES_PAGE_TITLE "Data Request"
+# Name of the central approval committee shown to the users; internally CENTRAL_APPROVAL_COMMITTEE.
+setdefault FRONTEND_VARIABLES_CENTRAL_APPROVAL_COMMITTEE_NAME "CCE Data Access Committee"
 # Sites per page of the feasibility table: the number of sites of production/generate_bridgeheads.sh on the server
 # (production 6, test 8), so that all sites fit on one page (no pagination). Not derived automatically: update it
 # when sites are added.

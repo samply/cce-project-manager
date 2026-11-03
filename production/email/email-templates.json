@@ -12,7 +12,8 @@
       "subject": "New Project Acceptance - CCE Office",
       "files": {
         "CREATOR": "creator-new-project-accepted.html",
-        "BRIDGEHEAD_ADMIN": "bridgehead-admin-new-project-accepted.html"
+        "BRIDGEHEAD_ADMIN": "bridgehead-admin-new-project-accepted.html",
+        "CENTRAL_APPROVAL_COMMITTEE": "central-approval-committee-new-project-accepted.html"
       }
     },
     "NEW_VOTUM": {
@@ -258,7 +259,9 @@
     "PROJECT_BACK_TO_REVIEW": {
       "subject": "Data Request <project-code/> Back in Review",
       "files": {
-        "CREATOR": "creator-project-back-to-review.html"
+        "CREATOR": "creator-project-back-to-review.html",
+        "PROJECT_MANAGER_ADMIN": "approval-team-project-back-to-review.html",
+        "CENTRAL_APPROVAL_COMMITTEE": "approval-team-project-back-to-review.html"
       }
     }
   }

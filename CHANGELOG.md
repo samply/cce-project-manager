@@ -12,6 +12,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   (`FRONTEND_VARIABLES_CENTRAL_APPROVAL_COMMITTEE_NAME`; needs a UI with the committee role)
 - Messages of the new action "Request changes" (`REQUEST_CHANGES_IN_APPROVAL` in `production/action-messages.json`);
   `BACK_TO_REVIEW` removed with the action it belonged to
+- Central approval committee on the servers: `CENTRAL_APPROVAL_COMMITTEE_GROUPS=/projects/cce/central-committee`
+  (Keycloak group, serveros) and `FRONTEND_VARIABLES_CENTRAL_APPROVAL_COMMITTEE_NAME="CCE Data Access Committee"`;
+  its own explanations in review (the CCE-Office reviews first) and in the central approval (evaluate: request changes
+  or start the local approval). Needs a backend and UI with the committee role
+- Emails to the CCE Data Access Committee: "request accepted" (`NEW_PROJECT_ACCEPTED`: awaits its evaluation, with the
+  request details) and "back in review" (`PROJECT_BACK_TO_REVIEW`, also to the CCE-Office; one file for both roles, so
+  that someone in both gets it once)
 - Hot reload for local development (`development/development.env`, `SPRING_DEVTOOLS_*`): changes in
   `production/` restart the backend started from the IDE; needs a backend with `spring-boot-devtools`
 - Release workflow: when a new version section of `CHANGELOG.md` reaches `main`, the tag `vX.Y.Z`, the GitHub
@@ -21,6 +28,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Bridgeheads per server: `production/generate_bridgeheads.sh` lists `id|human-readable|environments|group`; a server
   offers the bridgeheads of its `DEPLOYMENT_ENVIRONMENT` (README "Bridgeheads")
 ### Changed
+- The applicant's "back in review" email shows the requested changes (the message of "Request changes") instead of
+  "the CCE-Office will contact you"
 - Keycloak groups of the bridgeheads (VerbIS realm, serveros `bridgehead-groups-dktk-cce`):
   `/projects/cce/bridgeheads/<group>/user` (bridgehead user, `BK_USER_GROUP_SUFFIX=/user`) and
   `/projects/cce/bridgeheads/<group>/admin` (bridgehead admin), instead of `/projects/cce/sites/<group>` and

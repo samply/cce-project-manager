@@ -119,6 +119,21 @@ What a deployment must set: `docs/minimal-configuration.md` in project-manager.
 `setdefault <variable> <production default> [<test default>]` (without a test default both get the production one).
 No default differs yet.
 
+## Roles
+
+Login goes through Keycloak (VerbIS realm); the accounts and groups are managed in the account portal (mcauth). The
+defaults in `production/entrypoint.sh` map these groups to the roles:
+
+| Role | Keycloak group |
+|---|---|
+| Project manager admin (CCE-Office) | `/projects/cce/project-manager-admin` |
+| Central approval committee ("CCE Data Access Committee") | `/projects/cce/central-committee` |
+| Bridgehead admin | `/projects/cce/bridgeheads/<group>/admin` |
+| Bridgehead user | `/projects/cce/bridgeheads/<group>/user` |
+| Researcher | `/apps/cce-federated-explorer` |
+
+Local development sets its own group names in `development/development.env` (e.g. `dev-central-committee`).
+
 ## Bridgeheads
 
 `production/generate_bridgeheads.sh` holds every bridgehead of CCE in one list, `id|human-readable|environments|group`:
