@@ -15,6 +15,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Bridgeheads per server: `production/generate_bridgeheads.sh` lists `id|human-readable|environments|group`; a server
   offers the bridgeheads of its `DEPLOYMENT_ENVIRONMENT` (README "Bridgeheads")
 ### Changed
+- Keycloak groups of the bridgeheads (VerbIS realm, serveros `bridgehead-groups-dktk-cce`):
+  `/projects/cce/bridgeheads/<group>/user` (bridgehead user, `BK_USER_GROUP_SUFFIX=/user`) and
+  `/projects/cce/bridgeheads/<group>/admin` (bridgehead admin), instead of `/projects/cce/sites/<group>` and
+  `/projects/cce/sites/<group>/admin`. Needs a backend that gives the admin role to an admin group not matching the user
+  pattern (project-manager CHANGELOG, Fixed "Bridgehead admin groups ...").
+  No dev groups: the test bridgehead cce-cruk-cc-dev uses the group of cce-cruk-cc
 - Bridgeheads follow the Explorer (project-manager-ops `bridgeheads/cce.md`): cce-dkfz, cce-dkfz-nct and
   cce-cruk-cc-dev only on test servers (the Explorer does not query them), cce-cruk-cc only in production; production request.cce.dkfz.de runs
   `DEPLOYMENT_ENVIRONMENT=TEST` while the sites test it. Names of the Explorer: Cancer Research UK Cambridge Center

@@ -125,7 +125,7 @@ No default differs yet.
 
 - **human-readable**: the display name of the Explorer (the Explorer has preference).
 - **environments**: `prod`, `test` or `prod,test`; a server offers the bridgeheads of its `DEPLOYMENT_ENVIRONMENT`.
-- **group**: the site group in Keycloak (`/projects/cce/sites/<group>`, `BRIDGEHEADS_CONFIG_<ID>_GROUP`); empty = the
+- **group**: the group in Keycloak (`/projects/cce/bridgeheads/<group>/user`, `/admin`, `BRIDGEHEADS_CONFIG_<ID>_GROUP`); empty = the
   bridgehead id. Several bridgeheads of one site share its group (needs a backend with site groups,
   project-manager `docs/bridgeheads.md`).
 - Commented rows: bridgeheads not offered at the moment.
