@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   (Keycloak group, serveros) and `FRONTEND_VARIABLES_CENTRAL_APPROVAL_COMMITTEE_NAME="CCE Data Access Committee"`;
   its own explanations in review (the CCE-Office reviews first) and in the central approval (evaluate: request changes
   or start the local approval). Needs a backend and UI with the committee role
+  An archived data request has its own explanation for the committee (it can reopen it for its evaluation)
 - Emails to the CCE Data Access Committee: "request accepted" (`NEW_PROJECT_ACCEPTED`: awaits its evaluation, with the
   request details) and "back in review" (`PROJECT_BACK_TO_REVIEW`, also to the CCE-Office; one file for both roles, so
   that someone in both gets it once)

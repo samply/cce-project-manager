@@ -410,6 +410,23 @@
       {
         "priority": 20,
         "project-state": "ARCHIVED",
+        "organisation-role": "CENTRAL_APPROVAL_COMMITTEE",
+        "explanation": {
+          "en": "This data request is archived. You can reopen it for the evaluation by the CCE Data Access Committee at any time: it then goes to central approval, and the applicant is informed.",
+          "de": "Diese Datenanfrage ist archiviert. Sie können sie jederzeit wieder zur Bewertung durch das CCE Data Access Committee öffnen: Sie geht dann in die zentrale Genehmigung, und die antragstellende Person wird informiert."
+        },
+        "success-message": {
+          "en": "The Data Request was accepted successfully.",
+          "de": "Die Datenanfrage wurde erfolgreich akzeptiert."
+        },
+        "error-message": {
+          "en": "We couldn't accept the Data Request. Please try again.",
+          "de": "Die Datenanfrage konnte nicht akzeptiert werden. Bitte versuchen Sie es erneut."
+        }
+      },
+      {
+        "priority": 20,
+        "project-state": "ARCHIVED",
         "project-role": "PROJECT_MANAGER_ADMIN",
         "explanation": {
           "en": "You can reopen this data request for evaluation by the CCE Data Access Committee at any time.",
