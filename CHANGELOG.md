@@ -6,6 +6,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Added
+- Local development: the group `dev-central-committee` gives the central approval committee role
+  (`CENTRAL_APPROVAL_COMMITTEE_GROUPS` in `development/development.env`); needs a backend with the committee role
+- Local development: the UI names the committee "CCE Data Access Committee", as the action texts and emails do
+  (`FRONTEND_VARIABLES_CENTRAL_APPROVAL_COMMITTEE_NAME`; needs a UI with the committee role)
+- Messages of the new action "Request changes" (`REQUEST_CHANGES_IN_APPROVAL` in `production/action-messages.json`);
+  `BACK_TO_REVIEW` removed with the action it belonged to
+- Central approval committee on the servers: `CENTRAL_APPROVAL_COMMITTEE_GROUPS=/projects/cce/central-committee`
+  (Keycloak group, serveros) and `FRONTEND_VARIABLES_CENTRAL_APPROVAL_COMMITTEE_NAME="CCE Data Access Committee"`;
+  its own explanations in review (the CCE-Office reviews first) and in the central approval (evaluate: request changes
+  or start the local approval). Needs a backend and UI with the committee role
+  An archived data request has its own explanation for the committee (it can reopen it for its evaluation)
+- Emails to the CCE Data Access Committee: "request accepted" (`NEW_PROJECT_ACCEPTED`: awaits its evaluation, with the
+  request details) and "back in review" (`PROJECT_BACK_TO_REVIEW`, also to the CCE-Office; one file for both roles, so
+  that someone in both gets it once)
 - Hot reload for local development (`development/development.env`, `SPRING_DEVTOOLS_*`): changes in
   `production/` restart the backend started from the IDE; needs a backend with `spring-boot-devtools`
 - Release workflow: when a new version section of `CHANGELOG.md` reaches `main`, the tag `vX.Y.Z`, the GitHub
@@ -15,6 +29,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Bridgeheads per server: `production/generate_bridgeheads.sh` lists `id|human-readable|environments|group`; a server
   offers the bridgeheads of its `DEPLOYMENT_ENVIRONMENT` (README "Bridgeheads")
 ### Changed
+- Local development: the email texts in base64 (`EMAIL_CONTEXT_B64*`: signature, support contacts, request link)
+  are those of `production/email/templates/` again (they still named the CCP team), with a comment to keep them
+  in step
+- The applicant's "back in review" email shows the requested changes (the message of "Request changes") instead of
+  "the CCE-Office will contact you"
 - Keycloak groups of the bridgeheads (VerbIS realm, serveros `bridgehead-groups-dktk-cce`):
   `/projects/cce/bridgeheads/<group>/user` (bridgehead user, `BK_USER_GROUP_SUFFIX=/user`) and
   `/projects/cce/bridgeheads/<group>/admin` (bridgehead admin), instead of `/projects/cce/sites/<group>` and
@@ -27,6 +46,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   (cce-cruk-cc-dev), Cancer Research UK Cambridge Center (Prod) (cce-cruk-cc)
 - Feasibility table page size: 6 sites in production, 8 on test servers (`FRONTEND_VARIABLES_FEASIBILITY_PAGE_SIZE`)
 - Contacts are exported only for the bridgeheads the server offers
+- Explanation of "Accept request" in review: request changes in the project manager instead of contacting the
+  applicant directly; the German texts translate the English again (also the one for an archived request)
+- German action texts (`production/action-messages.json`) translate the English again: many explanations were
+  shortened or shared one text for different situations (script download, site authorization, final phase,
+  finishing, assigning users, results URL)
 - Project manager admins and bridgehead admins come from the VerbIS Keycloak groups
   `/projects/cce/project-manager-admin` and `/projects/cce/sites/<bridgehead id>/admin` (`PM_ADMIN_GROUPS`,
   `BK_*_GROUP_*`); the old groups `cce-requester-admin` and `CCE_<site>[_Verwalter]` did not exist in Keycloak

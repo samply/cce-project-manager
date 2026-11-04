@@ -107,6 +107,8 @@ setdefault JWT_GROUPS_CLAIM "groups"
 
 # Keycloak group path (see the site groups above).
 setdefault PM_ADMIN_GROUPS "/projects/cce/project-manager-admin"
+# Central approval committee (shown to the users as FRONTEND_VARIABLES_CENTRAL_APPROVAL_COMMITTEE_NAME).
+setdefault CENTRAL_APPROVAL_COMMITTEE_GROUPS "/projects/cce/central-committee"
 setdefault PROJECT_DOCUMENTS_DIRECTORY "/app/documents"
 
 setdefault PROJECT_MANAGER_EMAIL_FROM "noreply-verbis@dkfz-heidelberg.de"
