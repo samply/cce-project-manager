@@ -119,6 +119,31 @@ What a deployment must set: `docs/minimal-configuration.md` in project-manager.
 `setdefault <variable> <production default> [<test default>]` (without a test default both get the production one).
 No default differs yet.
 
+## Variables the server must set
+
+This configuration has no default for the variables below; the server sets them (VerbIS servers: serveros, the
+compose file of the VM, with the secrets from OpenBao). Everything else has a default in `production/entrypoint.sh`.
+
+| Variable | Secret | What |
+|---|---|---|
+| `DEPLOYMENT_ENVIRONMENT` | no | test servers: `TEST` (default `PROD`); chooses test defaults and the bridgeheads |
+| `FRONTEND_BASEURL`, `BACKEND_BASEURL` | no | public URLs of the UI and of the API (links in emails, redirects) |
+| `SERVER_SERVLET_CONTEXT_PATH` | no | path of the API, e.g. `/api` |
+| `SERVER_FORWARD_HEADERS_STRATEGY` | no | `framework` behind a reverse proxy (HTTPS redirects to the login server) |
+| `PROJECT_MANAGER_DB_URL`, `PROJECT_MANAGER_DB_USER` | no | PostgreSQL database |
+| `PROJECT_MANAGER_DB_PASSWORD` | yes | password of the database |
+| `DB_ENCRYPTION_PRIVATE_KEY_IN_BASE64` | yes | AES key of the encrypted columns; never change it once data exists |
+| `OIDC_URL`, `OIDC_CLIENT_ID` | no | issuer and confidential client of the API at the login server |
+| `OIDC_CLIENT_SECRET` | yes | secret of that client |
+| `BEAM_URL` | no | the Beam proxy of the server, e.g. `http://beam-proxy:8081` |
+| `BEAM_API_KEY` | yes | the key of the project manager's app in that proxy (`APP_<app>_KEY` of the proxy) |
+| `BEAM_PROJECT_MANAGER_ID` | no | the app: `<app>.<proxy name>.<broker id>`; `<app>` as in `APP_<app>_KEY` |
+| `BROKER_ID` | no | the broker of the proxy; builds the Beam ids of the bridgeheads (`focus.<id>.<broker id>`, ...) |
+| `EXPLORER_URL` | no | the Explorer that sends the queries |
+| `SPRING_MAIL_TEST_HOST`, `SPRING_MAIL_TEST_PORT` | no | test servers only: SMTP server that receives the emails (e.g. Mailpit) |
+
+The UI (`project-manager-ui`) has its own variables (`VUE_APP_*`, see the compose example above).
+
 ## Roles
 
 Login goes through Keycloak (VerbIS realm); the accounts and groups are managed in the account portal (mcauth). The
@@ -136,20 +161,21 @@ Local development sets its own group names in `development/development.env` (e.g
 
 ## Bridgeheads
 
-`production/generate_bridgeheads.sh` holds every bridgehead of CCE in one list, `id|human-readable|environments|group`:
+`production/generate_bridgeheads.sh` holds one line per CCE site, `site|human-readable|production bridgehead|test
+bridgehead`:
 
+- **site**: the site in Keycloak (`/projects/cce/sites/<site>/teiler-user`, `/bridgehead-admin`), shared by the site's
+  bridgeheads (`BRIDGEHEADS_CONFIG_<ID>_GROUP`; needs a backend with site groups, project-manager
+  `docs/bridgeheads.md`).
 - **human-readable**: the display name of the Explorer (the Explorer has preference).
-- **id**: the `SITE_ID` of the bridgehead; its Explorer collection id is `lens-<id>`.
-- **environments**: `prod`, `test` or `prod,test`; a server offers the bridgeheads of its `DEPLOYMENT_ENVIRONMENT`.
-  A server reaches only the bridgeheads of its broker: `PROD` = `broker.cce.dkfz.de`, `TEST` =
-  `test-no-real-data.broker.samply.de`. `BROKER_ID` and the Beam proxy come from serveros, which chooses them with the
-  same `DEPLOYMENT_ENVIRONMENT`.
-- **group**: the site in Keycloak (`/projects/cce/sites/<group>/teiler-user`, `/bridgehead-admin`,
-  `BRIDGEHEADS_CONFIG_<ID>_GROUP`); empty = the bridgehead id. Several bridgeheads of one site share its group
-  (needs a backend with site groups, project-manager `docs/bridgeheads.md`).
-- Commented rows: bridgeheads not offered at the moment.
+- **production / test bridgehead**: the `SITE_ID` of the site's bridgehead on that broker (empty = none); its Explorer
+  collection id is `lens-<bridgehead id>`. A server offers the bridgeheads of its `DEPLOYMENT_ENVIRONMENT`, because it
+  reaches only its own broker: `PROD` = `broker.cce.dkfz.de`, `TEST` = `test-no-real-data.broker.samply.de`.
+  `BROKER_ID` and the Beam proxy come from serveros, which chooses them with the same `DEPLOYMENT_ENVIRONMENT`.
 
-Contacts of a bridgehead the server does not offer are left out. The list per bridgehead and the reasons:
+Example: `dkfz-master|German Cancer Research Center|dkfz-master|cce-master` is DKFZ's bridgehead, `cce-master` on the
+test broker today and `dkfz-master` on the production broker after the migration. Contacts are listed per site and go
+to the bridgehead the server offers. The list per bridgehead and the reasons:
 project-manager-ops `bridgeheads/cce.md`.
 
 ## Optional modules

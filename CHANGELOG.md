@@ -26,8 +26,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   release (notes = that section) and the version images are created automatically
 - `DEPLOYMENT_ENVIRONMENT` (`PROD` by default, `TEST` on test servers; any other value stops the start):
   `setdefault <variable> <production default> [<test default>]` gives test servers their own defaults
-- Bridgeheads per server: `production/generate_bridgeheads.sh` lists `id|human-readable|environments|group`; a server
-  offers the bridgeheads of its `DEPLOYMENT_ENVIRONMENT` (README "Bridgeheads")
+- Bridgeheads per server: `production/generate_bridgeheads.sh` lists one line per site,
+  `site|human-readable|production bridgehead|test bridgehead`; a server offers the bridgeheads of its
+  `DEPLOYMENT_ENVIRONMENT` (README "Bridgeheads"). Contacts are listed per site
 ### Changed
 - Keycloak groups per site (serveros, to be merged together with this change):
   `/projects/cce/sites/<group>/teiler-user` (bridgehead user, `BK_USER_GROUP_SUFFIX=/teiler-user`) and

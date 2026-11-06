@@ -63,7 +63,7 @@ setdefault PROJECT_ID_TEMPLATE "REQ-{{YEAR}}-{{SEQUENCE:4}}"
 setdefault EXPORTER_QUERY_LABEL_TEMPLATE "[{{PROJECT_CODE}}] {{QUERY_LABEL}}"
 
 # export BEAM_API_KEY="App1Secret" #################################### <= Please configure me
-# export BEAM_PROJECT_MANAGER_ID="project-manager.proxy.broker.ccp-it.dktk.dkfz.de" #################################### <= Please configure me
+# BEAM_PROJECT_MANAGER_ID (<app>.<proxy>.<broker>) and BROKER_ID: set by the server (serveros compose), not here.
 # export BEAM_URL="http://beam-proxy:8081" #################################### <= Please configure me
 
 # Groups are Keycloak (VerbIS realm) paths as Keycloak shows them; the backend ignores the leading slash.
