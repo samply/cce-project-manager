@@ -59,10 +59,13 @@ fi
 }
 
 # Bridgeheads: id|human-readable|environments|group
+# - id: the SITE_ID of the bridgehead; its Explorer collection id is lens-<id>.
 # - human-readable: the display name of the Explorer (without the flag).
-# - environments: prod, test or prod,test (the servers that offer the bridgehead). The production server
-#   explorer.cce.dkfz.de / request.cce.dkfz.de runs TEST while the sites test it.
-# - group: the group of the identity provider (/projects/cce/bridgeheads/<group>/user, .../admin); empty = the id.
+# - environments: prod, test or prod,test (the servers that offer the bridgehead). A server reaches only the
+#   bridgeheads of its broker: PROD = broker.cce.dkfz.de, TEST = test-no-real-data.broker.samply.de. The only
+#   server, request.cce.dkfz.de, runs TEST until the sites move to the production broker.
+# - group: the site in the identity provider (/projects/cce/sites/<group>/teiler-user, .../bridgehead-admin);
+#   empty = the id. A site's production and test bridgeheads share the group of the production id.
 active_bridgeheads=" "
 while IFS='|' read -r id human environments group; do
     [[ -z "$id" || "$id" == \#* ]] && continue
@@ -70,15 +73,20 @@ while IFS='|' read -r id human environments group; do
     generate_bridgehead "$id" "$human" "$group"
     active_bridgeheads+="${id} "
 done <<EOF
-cce-dkfz|German Cancer Research Center (Test)|test|
-cce-dkfz-nct|German Cancer Research Center / National Center for Tumor Diseases|test|
-cce-master|German Cancer Research Center|prod,test|
-cce-gr|Gustave Roussy|prod,test|
-cce-vhio|Vall d'Hebron Institute of Oncology|prod,test|
-cce-cruk-cc-dev|Cancer Research UK Cambridge Center|test|cce-cruk-cc
-cce-cruk-cc|Cancer Research UK Cambridge Center (Prod)|prod|
-cce-ki|Karolinska Institutet|prod,test|
-cce-nki|Netherlands Cancer Institute|prod,test|
+# Production broker: every site after the migration (one bridgehead per site; UK also has a test one).
+dkfz-master|German Cancer Research Center|prod|
+gustave-roussy|Gustave Roussy|prod|
+karolinska|Karolinska Institutet|prod|
+nki|Netherlands Cancer Institute|prod|
+vhio|Vall d'Hebron Institute of Oncology|prod|
+cruk-cc|Cancer Research UK Cambridge Center|prod|
+# Test broker: the bridgeheads until the migration; afterwards only UK's test bridgehead.
+cce-master|German Cancer Research Center|test|dkfz-master
+cce-gr|Gustave Roussy|test|gustave-roussy
+cce-ki|Karolinska Institutet|test|karolinska
+cce-nki|Netherlands Cancer Institute|test|nki
+cce-vhio|Vall d'Hebron Institute of Oncology|test|vhio
+cce-cruk-cc-dev|Cancer Research UK Cambridge Center|test|cruk-cc
 EOF
 
 # Contact data: bridgehead-id|contact-index|language|name|description|email-address
@@ -86,8 +94,8 @@ EOF
 # row per contact (normally the first language row). Rows of bridgeheads that this
 # server does not offer are skipped (any variable of a bridgehead registers it).
 # TODO: fill in real contacts for the CCE bridgeheads above. Example (commented out):
-# cce-dkfz|0|en|Dr. Jane Example|CCE bridgehead contact|jane.example@cce-dkfz.example.org
-# cce-dkfz|0|de|Dr. Jane Example|CCE-Bridgehead-Kontakt|
+# dkfz-master|0|en|Dr. Jane Example|CCE bridgehead contact|jane.example@dkfz.example.org
+# dkfz-master|0|de|Dr. Jane Example|CCE-Bridgehead-Kontakt|
 while IFS='|' read -r id index language name description email_address; do
     [[ -z "$id" || "$id" == \#* ]] && continue
     [[ "$active_bridgeheads" == *" ${id} "* ]] || continue

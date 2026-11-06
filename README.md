@@ -128,8 +128,8 @@ defaults in `production/entrypoint.sh` map these groups to the roles:
 |---|---|
 | Project manager admin (CCE-Office) | `/projects/cce/project-manager-admin` |
 | Central approval committee ("CCE Data Access Committee") | `/projects/cce/central-committee` |
-| Bridgehead admin | `/projects/cce/bridgeheads/<group>/admin` |
-| Bridgehead user | `/projects/cce/bridgeheads/<group>/user` |
+| Bridgehead admin | `/projects/cce/sites/<group>/bridgehead-admin` |
+| Bridgehead user (Teiler user) | `/projects/cce/sites/<group>/teiler-user` |
 | Researcher | `/apps/cce-federated-explorer` |
 
 Local development sets its own group names in `development/development.env` (e.g. `dev-central-committee`).
@@ -139,10 +139,14 @@ Local development sets its own group names in `development/development.env` (e.g
 `production/generate_bridgeheads.sh` holds every bridgehead of CCE in one list, `id|human-readable|environments|group`:
 
 - **human-readable**: the display name of the Explorer (the Explorer has preference).
+- **id**: the `SITE_ID` of the bridgehead; its Explorer collection id is `lens-<id>`.
 - **environments**: `prod`, `test` or `prod,test`; a server offers the bridgeheads of its `DEPLOYMENT_ENVIRONMENT`.
-- **group**: the group in Keycloak (`/projects/cce/bridgeheads/<group>/user`, `/admin`, `BRIDGEHEADS_CONFIG_<ID>_GROUP`); empty = the
-  bridgehead id. Several bridgeheads of one site share its group (needs a backend with site groups,
-  project-manager `docs/bridgeheads.md`).
+  A server reaches only the bridgeheads of its broker: `PROD` = `broker.cce.dkfz.de`, `TEST` =
+  `test-no-real-data.broker.samply.de`. `BROKER_ID` and the Beam proxy come from serveros, which chooses them with the
+  same `DEPLOYMENT_ENVIRONMENT`.
+- **group**: the site in Keycloak (`/projects/cce/sites/<group>/teiler-user`, `/bridgehead-admin`,
+  `BRIDGEHEADS_CONFIG_<ID>_GROUP`); empty = the bridgehead id. Several bridgeheads of one site share its group
+  (needs a backend with site groups, project-manager `docs/bridgeheads.md`).
 - Commented rows: bridgeheads not offered at the moment.
 
 Contacts of a bridgehead the server does not offer are left out. The list per bridgehead and the reasons:
