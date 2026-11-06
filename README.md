@@ -164,19 +164,22 @@ Local development sets its own group names in `development/development.env` (e.g
 `production/generate_bridgeheads.sh` holds one line per CCE site, `site|human-readable|production bridgehead|test
 bridgehead`:
 
-- **site**: the site in Keycloak (`/projects/cce/sites/<site>/teiler-user`, `/bridgehead-admin`), shared by the site's
-  bridgeheads (`BRIDGEHEADS_CONFIG_<ID>_GROUP`; needs a backend with site groups, project-manager
-  `docs/bridgeheads.md`).
+- **site**: the site in Keycloak (`/projects/cce/sites/<site>/teiler-user`, `/bridgehead-admin`),
+  shared by the site's bridgeheads (`BRIDGEHEADS_CONFIG_<ID>_GROUP`; needs a backend with site groups,
+  project-manager `docs/bridgeheads.md`).
 - **human-readable**: the display name of the Explorer (the Explorer has preference).
-- **production / test bridgehead**: the `SITE_ID` of the site's bridgehead on that broker (empty = none); its Explorer
-  collection id is `lens-<bridgehead id>`. A server offers the bridgeheads of its `DEPLOYMENT_ENVIRONMENT`, because it
-  reaches only its own broker: `PROD` = `broker.cce.dkfz.de`, `TEST` = `test-no-real-data.broker.samply.de`.
-  `BROKER_ID` and the Beam proxy come from serveros, which chooses them with the same `DEPLOYMENT_ENVIRONMENT`.
+- **production / test bridgehead**: the `SITE_ID` of the site's bridgehead in that environment (empty = none); its
+  Explorer collection id is `lens-<bridgehead id>`. A server offers the bridgeheads of its `DEPLOYMENT_ENVIRONMENT`.
+  A site with two bridgeheads in the same environment has one line per bridgehead.
+  A server reaches only its own broker: `PROD` = `broker.cce.dkfz.de`, `TEST` =
+  `test-no-real-data.broker.samply.de`. `BROKER_ID` and the Beam proxy come from serveros, which chooses them with
+  the same `DEPLOYMENT_ENVIRONMENT`.
+- Commented rows: bridgeheads not offered at the moment.
 
 Example: `dkfz-master|German Cancer Research Center|dkfz-master|cce-master` is DKFZ's bridgehead, `cce-master` on the
-test broker today and `dkfz-master` on the production broker after the migration. Contacts are listed per site and go
-to the bridgehead the server offers. The list per bridgehead and the reasons:
-project-manager-ops `bridgeheads/cce.md`.
+test broker today and `dkfz-master` on the production broker after the migration.
+Contacts are listed per site and go to every bridgehead of the site that the server offers. The list per bridgehead
+and the reasons: project-manager-ops `bridgeheads/cce.md`.
 
 ## Optional modules
 
