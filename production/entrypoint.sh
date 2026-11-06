@@ -63,16 +63,16 @@ setdefault PROJECT_ID_TEMPLATE "REQ-{{YEAR}}-{{SEQUENCE:4}}"
 setdefault EXPORTER_QUERY_LABEL_TEMPLATE "[{{PROJECT_CODE}}] {{QUERY_LABEL}}"
 
 # export BEAM_API_KEY="App1Secret" #################################### <= Please configure me
-# export BEAM_PROJECT_MANAGER_ID="project-manager.proxy.broker.ccp-it.dktk.dkfz.de" #################################### <= Please configure me
+# BEAM_PROJECT_MANAGER_ID (<app>.<proxy>.<broker>) and BROKER_ID: set by the server (serveros compose), not here.
 # export BEAM_URL="http://beam-proxy:8081" #################################### <= Please configure me
 
 # Groups are Keycloak (VerbIS realm) paths as Keycloak shows them; the backend ignores the leading slash.
-# Bridgehead users: /projects/cce/bridgeheads/<group>/user, admins:
-# /projects/cce/bridgeheads/<group>/admin (<group>: BRIDGEHEADS_CONFIG_<ID>_GROUP, default the bridgehead id).
-setdefault BK_ADMIN_GROUP_PREFIX "/projects/cce/bridgeheads/"
-setdefault BK_ADMIN_GROUP_SUFFIX "/admin"
-setdefault BK_USER_GROUP_PREFIX "/projects/cce/bridgeheads/"
-setdefault BK_USER_GROUP_SUFFIX "/user"
+# Bridgehead users: /projects/cce/sites/<group>/teiler-user, admins:
+# /projects/cce/sites/<group>/bridgehead-admin (<group>: BRIDGEHEADS_CONFIG_<ID>_GROUP, default the bridgehead id).
+setdefault BK_ADMIN_GROUP_PREFIX "/projects/cce/sites/"
+setdefault BK_ADMIN_GROUP_SUFFIX "/bridgehead-admin"
+setdefault BK_USER_GROUP_PREFIX "/projects/cce/sites/"
+setdefault BK_USER_GROUP_SUFFIX "/teiler-user"
 # Comma-separated groups allowed to create requests without bridgehead membership.
 # Everyone who can use the Explorer (same rule as the Keycloak app cce-project-manager).
 setdefault RESEARCHER_GROUPS "/apps/cce-federated-explorer"

@@ -58,40 +58,44 @@ EOF
 fi
 }
 
-# Bridgeheads: id|human-readable|environments|group
+# Sites: site|human-readable|production bridgehead|test bridgehead
+# - site: the site in Keycloak (/projects/cce/sites/<site>/teiler-user, .../bridgehead-admin), shared by the
+#   site's bridgeheads.
 # - human-readable: the display name of the Explorer (without the flag).
-# - environments: prod, test or prod,test (the servers that offer the bridgehead). The production server
-#   explorer.cce.dkfz.de / request.cce.dkfz.de runs TEST while the sites test it.
-# - group: the group of the identity provider (/projects/cce/bridgeheads/<group>/user, .../admin); empty = the id.
-active_bridgeheads=" "
-while IFS='|' read -r id human environments group; do
-    [[ -z "$id" || "$id" == \#* ]] && continue
-    [[ ",${environments}," == *",${deployment_environment},"* ]] || continue
+# - production / test bridgehead: the SITE_ID of the site's bridgehead on that broker (empty = none); its Explorer
+#   collection id is lens-<bridgehead id>. A server offers the bridgeheads of its DEPLOYMENT_ENVIRONMENT, because
+#   it reaches only its own broker: PROD = broker.cce.dkfz.de, TEST = test-no-real-data.broker.samply.de.
+# Until the migration every site runs on the test broker under its test id and request.cce.dkfz.de runs TEST; at the
+# migration the bridgeheads move to the production broker under their production id and the server switches to PROD.
+declare -A site_bridgehead=()
+while IFS='|' read -r site human production test; do
+    [[ -z "$site" || "$site" == \#* ]] && continue
+    if [[ "$deployment_environment" == "test" ]]; then id="$test"; else id="$production"; fi
+    [[ -z "$id" ]] && continue
+    # The group defaults to the bridgehead id; set it only when they differ.
+    group=""
+    [[ "$id" != "$site" ]] && group="$site"
     generate_bridgehead "$id" "$human" "$group"
-    active_bridgeheads+="${id} "
+    site_bridgehead[$site]="$id"
 done <<EOF
-cce-dkfz|German Cancer Research Center (Test)|test|
-cce-dkfz-nct|German Cancer Research Center / National Center for Tumor Diseases|test|
-cce-master|German Cancer Research Center|prod,test|
-cce-gr|Gustave Roussy|prod,test|
-cce-vhio|Vall d'Hebron Institute of Oncology|prod,test|
-cce-cruk-cc-dev|Cancer Research UK Cambridge Center|test|cce-cruk-cc
-cce-cruk-cc|Cancer Research UK Cambridge Center (Prod)|prod|
-cce-ki|Karolinska Institutet|prod,test|
-cce-nki|Netherlands Cancer Institute|prod,test|
+dkfz-master|German Cancer Research Center|dkfz-master|cce-master
+gustave-roussy|Gustave Roussy|gustave-roussy|cce-gr
+karolinska|Karolinska Institutet|karolinska|cce-ki
+nki|Netherlands Cancer Institute|nki|cce-nki
+vhio|Vall d'Hebron Institute of Oncology|vhio|cce-vhio
+cruk-cc|Cancer Research UK Cambridge Center|cruk-cc|cce-cruk-cc-dev
 EOF
 
-# Contact data: bridgehead-id|contact-index|language|name|description|email-address
-# Add one row for each translated contact variant. Put the email address on one
-# row per contact (normally the first language row). Rows of bridgeheads that this
-# server does not offer are skipped (any variable of a bridgehead registers it).
-# TODO: fill in real contacts for the CCE bridgeheads above. Example (commented out):
-# cce-dkfz|0|en|Dr. Jane Example|CCE bridgehead contact|jane.example@cce-dkfz.example.org
-# cce-dkfz|0|de|Dr. Jane Example|CCE-Bridgehead-Kontakt|
-while IFS='|' read -r id index language name description email_address; do
-    [[ -z "$id" || "$id" == \#* ]] && continue
-    [[ "$active_bridgeheads" == *" ${id} "* ]] || continue
+# Contact data: site|contact-index|language|name|description|email-address
+# One row for each translated contact variant; the email address on one row per contact (normally the first
+# language row). A contact goes to the bridgehead of its site that this server offers.
+# TODO: fill in real contacts for the CCE sites above. Example (commented out):
+# dkfz-master|0|en|Dr. Jane Example|CCE bridgehead contact|jane.example@dkfz.example.org
+# dkfz-master|0|de|Dr. Jane Example|CCE-Bridgehead-Kontakt|
+while IFS='|' read -r site index language name description email_address; do
+    [[ -z "$site" || "$site" == \#* ]] && continue
+    [[ -n "${site_bridgehead[$site]:-}" ]] || continue
     generate_bridgehead_contact_language \
-        "$id" "$index" "$language" "$name" "$description" "$email_address"
+        "${site_bridgehead[$site]}" "$index" "$language" "$name" "$description" "$email_address"
 done <<EOF
 EOF

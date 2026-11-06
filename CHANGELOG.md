@@ -26,9 +26,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   release (notes = that section) and the version images are created automatically
 - `DEPLOYMENT_ENVIRONMENT` (`PROD` by default, `TEST` on test servers; any other value stops the start):
   `setdefault <variable> <production default> [<test default>]` gives test servers their own defaults
-- Bridgeheads per server: `production/generate_bridgeheads.sh` lists `id|human-readable|environments|group`; a server
-  offers the bridgeheads of its `DEPLOYMENT_ENVIRONMENT` (README "Bridgeheads")
+- Bridgeheads per server: `production/generate_bridgeheads.sh` lists one line per site,
+  `site|human-readable|production bridgehead|test bridgehead`; a server offers the bridgeheads of its
+  `DEPLOYMENT_ENVIRONMENT` (README "Bridgeheads"). Contacts are listed per site
 ### Changed
+- Keycloak groups per site (serveros, to be merged together with this change):
+  `/projects/cce/sites/<group>/teiler-user` (bridgehead user, `BK_USER_GROUP_SUFFIX=/teiler-user`) and
+  `/projects/cce/sites/<group>/bridgehead-admin` (bridgehead admin) instead of `/projects/cce/bridgeheads/<group>/user`
+  and `/admin`, so that a site can also have groups that are not about a bridgehead. The group of a site is its
+  production id (`dkfz-master`, `gustave-roussy`, `karolinska`, `nki`, `vhio`, `cruk-cc`), shared with its test
+  bridgehead
+- Bridgeheads follow the new CCE site IDs (cce-explorer PR #50): production (`broker.cce.dkfz.de`) dkfz-master,
+  gustave-roussy, karolinska, nki, vhio, cruk-cc; test (`test-no-real-data.broker.samply.de`) cce-master, cce-gr,
+  cce-ki, cce-nki, cce-vhio, cce-cruk-cc-dev. cce-dkfz, cce-dkfz-nct and cce-cruk-cc are removed.
+  request.cce.dkfz.de needs `DEPLOYMENT_ENVIRONMENT=TEST` (serveros) until the sites move to the production broker
 - Local development: the email texts in base64 (`EMAIL_CONTEXT_B64*`: signature, support contacts, request link)
   are those of `production/email/templates/` again (they still named the CCP team), with a comment to keep them
   in step
