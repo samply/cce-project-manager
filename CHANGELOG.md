@@ -31,8 +31,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   same environment); a server offers the bridgeheads of its `DEPLOYMENT_ENVIRONMENT` (README
   "Bridgeheads"). Contacts are listed per site
 ### Changed
-- Keycloak groups per site (serveros, to be merged together with this change):
-  `/projects/cce/sites/<group>/teiler-user` (bridgehead user, `BK_USER_GROUP_SUFFIX=/teiler-user`) and
+- Keycloak groups per site (serveros, to be merged together with this change; the user group is `researcher`, serveros
+  `rename-teiler-user-to-researcher`):
+  `/projects/cce/sites/<group>/researcher` (bridgehead user, `BK_USER_GROUP_SUFFIX=/researcher`) and
   `/projects/cce/sites/<group>/bridgehead-admin` (bridgehead admin) instead of `/projects/cce/bridgeheads/<group>/user`
   and `/admin`, so that a site can also have groups that are not about a bridgehead. The group of a site is its
   production id (`dkfz-master`, `gustave-roussy`, `karolinska`, `nki`, `vhio`, `cruk-cc`), shared with its test

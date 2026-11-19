@@ -154,7 +154,7 @@ defaults in `production/entrypoint.sh` map these groups to the roles:
 | Project manager admin (CCE-Office) | `/projects/cce/project-manager-admin` |
 | Central approval committee ("CCE Data Access Committee") | `/projects/cce/central-committee` |
 | Bridgehead admin | `/projects/cce/sites/<group>/bridgehead-admin` |
-| Bridgehead user (Teiler user) | `/projects/cce/sites/<group>/teiler-user` |
+| Bridgehead user (site researcher) | `/projects/cce/sites/<group>/researcher` |
 | Researcher | `/apps/cce-federated-explorer` |
 
 Local development sets its own group names in `development/development.env` (e.g. `dev-central-committee`).
@@ -164,7 +164,7 @@ Local development sets its own group names in `development/development.env` (e.g
 `production/generate_bridgeheads.sh` holds one line per CCE site, `site|human-readable|production bridgehead|test
 bridgehead`:
 
-- **site**: the site in Keycloak (`/projects/cce/sites/<site>/teiler-user`, `/bridgehead-admin`),
+- **site**: the site in Keycloak (`/projects/cce/sites/<site>/researcher`, `/bridgehead-admin`),
   shared by the site's bridgeheads (`BRIDGEHEADS_CONFIG_<ID>_GROUP`; needs a backend with site groups,
   project-manager `docs/bridgeheads.md`).
 - **human-readable**: the display name of the Explorer (the Explorer has preference).
